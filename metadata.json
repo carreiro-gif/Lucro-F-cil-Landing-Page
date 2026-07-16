@@ -1,0 +1,6 @@
+{
+  "name": "Lucro Fácil",
+  "description": "Landing Page oficial do SaaS de Food Service Lucro Fácil",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
