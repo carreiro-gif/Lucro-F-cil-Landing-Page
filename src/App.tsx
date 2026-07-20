@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp, 
   ShieldCheck, 
@@ -97,6 +97,10 @@ const MOCK_COPY_DISHES: CopyDishItem[] = [
 ];
 
 export default function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isAnnual, setIsAnnual] = useState<boolean>(false);
   const [activeDemoTab, setActiveDemoTab] = useState<'markup' | 'xande' | 'buffet' | 'bcg'>('markup');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -158,7 +162,9 @@ export default function App() {
                 VER DEMO
               </a>
               <a 
-                href="#pricing"
+                href="https://lucro-facil.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2.5 bg-transparent border border-emerald-500/80 hover:bg-emerald-500/10 text-emerald-400 font-bold text-xs rounded-lg transition-all shadow-md shadow-emerald-500/5 flex items-center gap-1"
               >
                 Criar Conta Grátis
@@ -188,7 +194,9 @@ export default function App() {
             <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-slate-300 hover:text-emerald-400 py-1 font-medium">Dúvidas Frequentes</a>
             <div className="pt-3 border-t border-slate-900 flex flex-col gap-2">
               <a 
-                href="#pricing"
+                href="https://lucro-facil.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 bg-emerald-500 text-slate-950 font-bold text-xs rounded-xl block"
               >
@@ -204,7 +212,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
           {/* Badge Alerta Piscando */}
-          <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-cyan-950/40 text-cyan-400 text-xs font-bold rounded-lg border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.15)] mb-8 font-mono tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-cyan-950/40 text-cyan-400 text-sm md:text-xs font-bold rounded-lg border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.15)] mb-8 font-mono tracking-wider">
             <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping" />
             <span>Módulo de Buffet Inteligente 🍲 e Xande IA já estão no ar!</span>
           </div>
@@ -222,7 +230,9 @@ export default function App() {
           {/* CTAs Principais */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-14 max-w-md mx-auto sm:max-w-none">
             <a 
-              href="#pricing"
+              href="https://lucro-facil.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 flex items-center justify-center gap-2 group cursor-pointer"
             >
               🚀 Começar Meu Teste de 14 Dias Grátis
@@ -247,7 +257,7 @@ export default function App() {
           </div>
 
           {/* Frases de Confiança pequenas */}
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-[11px] text-slate-400 font-mono font-medium pb-16 border-b border-zinc-900 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs md:text-[11px] text-slate-400 font-mono font-medium pb-16 border-b border-zinc-900 max-w-4xl mx-auto">
             <span className="flex items-center gap-1.5">
               <span className="text-red-400 font-bold">❌</span> Não pede cartão de crédito no cadastro.
             </span>
@@ -267,19 +277,19 @@ export default function App() {
         <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center shadow-lg shadow-black/40">
           <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
             <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-emerald-400 block animate-pulse">R$ 12 Milhões+</span>
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Lucro Recuperado do Delivery</span>
+            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Lucro Recuperado do Delivery</span>
           </div>
           <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
             <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-emerald-400 block">34.2%</span>
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Aumento Médio de Margem</span>
+            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Aumento Médio de Margem</span>
           </div>
           <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
             <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-white block">1.800+</span>
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Restaurantes Protegidos</span>
+            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Restaurantes Protegidos</span>
           </div>
           <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
             <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-cyan-400 block">{"< 1%"}</span>
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block font-mono">Desperdício Médio de Rampa</span>
+            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block font-mono">Desperdício Médio de Rampa</span>
           </div>
         </div>
       </section>
@@ -289,11 +299,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs text-red-500 font-extrabold uppercase tracking-widest font-mono block mb-2">A DURA REALIDADE</span>
+            <span className="text-sm md:text-xs text-red-500 font-extrabold uppercase tracking-widest font-mono block mb-2">A DURA REALIDADE</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white">
               Por que tantos restaurantes chegam a faturar alto, mas o dono termina o mês sem um centavo no bolso?
             </h2>
-            <p className="text-slate-400 text-sm md:text-base mt-4 leading-relaxed">
+            <p className="text-slate-400 text-base md:text-sm mt-4 leading-relaxed">
               O problema quase nunca é o sabor do seu prato ou o movimento do salão. O dinheiro some de forma invisível em buracos de precificação que ninguém te ensinou a fechar:
             </p>
           </div>
@@ -316,15 +326,15 @@ export default function App() {
                   Vender muito sem o Lucro Fácil é igual a tentar encher um balde furado!
                 </h3>
                 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm md:text-xs text-slate-300 leading-relaxed">
                   Você já passou pela frustração de ter um final de semana com a cozinha lotada, motoboy saindo toda hora, equipe exausta, rache de faturamento... e quando chega na segunda-feira para olhar a conta do banco, ela está zerada?
                 </p>
                 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm md:text-xs text-slate-300 leading-relaxed">
                   Não adianta inventar promoção maluca, atrair novos clientes ou gastar rios de dinheiro com panfletos e anúncios se o seu restaurante for um balde furado. O dinheiro está entrando pela boca do balde e vazando pelos furos invisíveis das taxas dos marketplaces, do frete bitributado e do desperdício de insumos na cozinha.
                 </p>
                 
-                <p className="text-xs text-slate-400 pt-3 border-t border-zinc-900">
+                <p className="text-sm md:text-xs text-slate-400 pt-3 border-t border-zinc-900">
                   O <strong className="text-emerald-400 font-semibold">Lucro Fácil</strong> não foi feito para você vender mais comida; foi feito para fazer o dinheiro sobrar. Nós tapamos os furos da sua precificação logo na primeira semana para que cada pedido entregue coloque lucro líquido real dentro do seu caixa.
                 </p>
               </div>
@@ -339,7 +349,7 @@ export default function App() {
                     className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[320px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
+                  <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[11px] md:text-[10px] text-slate-400 font-mono border border-zinc-800">
                     Ilustração: Operação de Rampa Real
                   </div>
                 </div>
@@ -357,7 +367,7 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">O Erro Fatal de Multiplicar por 3</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                   Achar que multiplicar o custo do ingrediente por 3 resolve tudo é um tiro no pé. As taxas do delivery (que chegam a 28,2%) e os impostos cobram a comissão em cima do preço cheio do prato, e não do que você gastou. No final, você paga para trabalhar sem perceber.
                 </p>
               </div>
@@ -370,7 +380,7 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">A Taxa Abusiva do Frete</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                   Os aplicativos cobram a porcentagem de comissão deles em cima do valor total bruto da conta, incluindo o frete que o próprio cliente pagou. Sem o cálculo de Markup Inverso do Lucro Fácil, essa comissão sai direto do seu lucro líquido.
                 </p>
               </div>
@@ -383,10 +393,10 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">O Encolhimento Fantasma: Você está dando comida de graça para o cliente?</h3>
-                <p className="text-xs text-slate-400 leading-relaxed mb-2">
+                <p className="text-sm md:text-xs text-slate-400 leading-relaxed mb-2">
                   Quando você compra 10kg de filé de frango ou carne bovina no fornecedor, você paga pelo peso bruto. Mas quando a sua equipe limpa a peça na cozinha, joga fora gordura, osso e nervo. O frango perde peso na limpeza. Depois, quando vai para a chapa ou para o forno, perde água e encolhe ainda mais.
                 </p>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                   Se você monta a sua ficha técnica pesando o ingrediente cru direto da embalagem, a sua conta está errada. O nome disso na gastronomia é <strong className="text-white">Fator de Correção e Índice de Cocção</strong>. No papel ou no Excel, fazer essa conta é uma tortura. No <strong className="text-emerald-400">Lucro Fácil</strong>, você só digita quanto comprou e quanto sobrou após o preparo. O sistema calcula o encolhimento invisível sozinho e ajusta o preço em tempo real.
                 </p>
               </div>
@@ -398,11 +408,11 @@ export default function App() {
                 <Layers className="w-5 h-5 text-emerald-400" />
               </span>
               <div>
-                <span className="text-[9px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded font-bold px-1.5 py-0.5 uppercase tracking-wide inline-block mb-2">RECURSO EXCLUSIVO ⚙️</span>
+                <span className="text-[10px] md:text-[9px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded font-bold px-1.5 py-0.5 uppercase tracking-wide inline-block mb-2">RECURSO EXCLUSIVO ⚙️</span>
                 <h3 className="font-bold text-white text-base mb-1.5 leading-tight">
                   Conheça o CFI: A engrenagem que calcula os custos fixos e protege o lucro do seu cardápio!
                 </h3>
-                <div className="text-xs text-slate-400 leading-relaxed space-y-2.5">
+                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-2.5">
                   <p>
                     Você já parou para pensar que o custo real de um prato não é só o arroz, o feijão e a carne? Se o seu restaurante tem aluguel, luz, água, contador, imposto e funcionários para pagar, cada porção de comida que sai da sua cozinha precisa carregar uma "fatiazinha" dessas despesas globais.
                   </p>
@@ -431,18 +441,18 @@ export default function App() {
             
             {/* Esquerda: Conteúdo persuasivo */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-cyan-500/15 text-cyan-400 text-xs font-semibold rounded-full border border-cyan-500/20 font-mono">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-cyan-500/15 text-cyan-400 text-sm md:text-xs font-semibold rounded-full border border-cyan-500/20 font-mono">
                 <Bot className="w-3.5 h-3.5 text-cyan-400" />
                 <span>XANDE IA: CONSULTOR FINANCEIRO DE BOLSO</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white leading-tight">
                 Conheça o Xande: Seu Consultor Financeiro de Bolso
               </h2>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                O Xande não vai te mostrar gráficos frios e cheios de termos de contador que te deixam com dor de cabeça. Ele conversa com você por escrito. Veja um exemplo real de como ele salva a sua operação no dia a dia:
+              <p className="text-sm md:text-xs text-slate-300 leading-relaxed">
+                O Xande não vai te mostrar gráficos frios e cheios de termos de contador que te deixam com dor de headache. Ele conversa com você por escrito. Veja um exemplo real de como ele salva a sua operação no dia a dia:
               </p>
 
-              <div className="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-5 space-y-3.5 text-xs">
+              <div className="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-5 space-y-3.5 text-sm md:text-xs">
                 <div className="space-y-1">
                   <span className="font-bold text-slate-300 font-mono block">Você digita:</span>
                   <p className="text-slate-400 italic">
@@ -495,7 +505,7 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+                <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                   <p>
                     Não é conversa fiada de consultor. O próprio blog oficial do iFood mantém uma calculadora de preços porque eles cansaram de ver restaurantes fechando as portas por pura falta de lucro. Eles deixam claro em letras garrafais: <strong className="text-white">somar a taxa do aplicativo direto no preço do custo do prato está errado e vai quebrar o seu negócio</strong>.
                   </p>
@@ -510,12 +520,12 @@ export default function App() {
 
                   <div className="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-4 space-y-2">
                     <span className="text-xs font-bold font-mono text-emerald-400 uppercase tracking-widest block">O Gargalo da Ferramenta Gratuita:</span>
-                    <p className="text-xs text-slate-400 leading-relaxed italic">
+                    <p className="text-sm md:text-xs text-slate-400 leading-relaxed italic">
                       "Mas a calculadora gratuita do iFood tem um problema crônico: ela é burra. Ela não salva seus dados, você tem que preencher tudo na mão toda vez, dá um trabalho danado e só serve para o iFood."
                     </p>
                   </div>
 
-                  <p className="text-xs text-slate-400">
+                  <p className="text-sm md:text-xs text-slate-400">
                     É por isso que nós criamos o <strong className="text-emerald-400">Lucro Fácil</strong>. Nós pegamos essa mesma lógica matemática rigorosa e automatizamos tudo. Você joga seus ingredientes uma vez só e o sistema calcula a blindagem em milissegundos não só para o iFood, mas também para a 99Food e para a Keeta. Tudo salvo, seguro e atualizado em cascata.
                   </p>
                 </div>
@@ -526,7 +536,7 @@ export default function App() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">Fonte Oficial</span>
-                    <span className="text-[10px] text-slate-500 block">Portal do Parceiro iFood</span>
+                    <span className="text-[11px] md:text-[10px] text-slate-500 block">Portal do Parceiro iFood</span>
                   </div>
                 </div>
               </div>
@@ -545,7 +555,7 @@ export default function App() {
             {/* Coluna da Esquerda: Textos de Dor e Conteúdo */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
                   ⚡ O Fim do Trabalho Manual
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white leading-tight">
@@ -553,7 +563,7 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+              <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
                   Chega de passar o dia inteiro quebrando a cabeça com contas diferentes para cada aplicativo de entrega. No Lucro Fácil, nós criamos a ferramenta mais simples e poderosa do mercado: a Tabela de Copiar e Colar.
                 </p>
@@ -564,14 +574,14 @@ export default function App() {
                 {/* Seleção Interativa do Prato */}
                 <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-4 sm:p-5 space-y-4 my-4">
                   <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-800/60">
-                    <span className="text-xs text-slate-400 font-mono font-medium">Selecione um prato para simular:</span>
+                    <span className="text-sm md:text-xs text-slate-400 font-mono font-medium">Selecione um prato para simular:</span>
                     <div className="flex gap-1.5 flex-wrap">
                       {MOCK_COPY_DISHES.map((dish, idx) => (
                         <button
                           key={idx}
                           type="button"
                           onClick={() => setSelectedDishIndex(idx)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all border cursor-pointer ${
+                          className={`px-3 py-1.5 rounded-lg text-sm md:text-xs font-bold transition-all border cursor-pointer ${
                             selectedDishIndex === idx
                               ? 'bg-emerald-500 text-zinc-950 border-emerald-400 font-semibold shadow-md shadow-emerald-500/10'
                               : 'bg-zinc-950 text-slate-400 border-zinc-800 hover:text-white hover:border-zinc-700'
@@ -584,20 +594,20 @@ export default function App() {
                   </div>
 
                   <div className="space-y-2">
-                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Preços Blindados Gerados na Tela:</span>
+                    <span className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Preços Blindados Gerados na Tela:</span>
                     
                     {/* Linha 1: Loja Física */}
                     <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">💰</span>
-                        <span className="text-xs font-semibold text-slate-300">Quanto cobrar na sua Loja Física / Balcão:</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar na sua Loja Física / Balcão:</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-emerald-400 font-mono">{MOCK_COPY_DISHES[selectedDishIndex].base}</span>
+                        <span className="text-sm md:text-xs font-bold text-emerald-400 font-mono">{MOCK_COPY_DISHES[selectedDishIndex].base}</span>
                         <button
                           type="button"
                           onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].base, `base-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
+                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
                         >
                           {copiedField === `base-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
                         </button>
@@ -608,14 +618,14 @@ export default function App() {
                     <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🛵</span>
-                        <span className="text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Plano Básico):</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Plano Básico):</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodBasic}</span>
+                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodBasic}</span>
                         <button
                           type="button"
                           onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].ifoodBasic, `basic-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
+                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
                         >
                           {copiedField === `basic-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
                         </button>
@@ -626,14 +636,14 @@ export default function App() {
                     <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🚀</span>
-                        <span className="text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Com Campanha Inteligente):</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Com Campanha Inteligente):</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodSmart}</span>
+                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodSmart}</span>
                         <button
                           type="button"
                           onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].ifoodSmart, `smart-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
+                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
                         >
                           {copiedField === `smart-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
                         </button>
@@ -644,14 +654,14 @@ export default function App() {
                     <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🔴</span>
-                        <span className="text-xs font-semibold text-slate-300">Quanto cobrar na 99Food:</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar na 99Food:</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].food99}</span>
+                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].food99}</span>
                         <button
                           type="button"
                           onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].food99, `99food-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
+                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
                         >
                           {copiedField === `99food-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
                         </button>
@@ -662,14 +672,14 @@ export default function App() {
                     <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🔵</span>
-                        <span className="text-xs font-semibold text-slate-300">Quanto cobrar na Keeta:</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar na Keeta:</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].keeta}</span>
+                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].keeta}</span>
                         <button
                           type="button"
                           onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].keeta, `keeta-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
+                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
                         >
                           {copiedField === `keeta-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
                         </button>
@@ -697,7 +707,7 @@ export default function App() {
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
+                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[11px] md:text-[10px] text-slate-400 font-mono border border-zinc-800">
                   Ilustração: Copiar & Colar Preços no Aplicativo
                 </div>
               </div>
@@ -715,7 +725,7 @@ export default function App() {
             {/* Coluna da Esquerda: Textos de Dor e Conteúdo */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
                   🛡️ O Segredo do Preço Certo
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white leading-tight">
@@ -723,12 +733,12 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+              <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
                   Para o seu restaurante sobrar dinheiro de verdade no fim do mês, o preço de venda na sua loja não pode ser inventado. Ele precisa seguir uma regra rígida baseada em 3 pilares que o Lucro Fácil controla para você:
                 </p>
                 
-                <ul className="space-y-3.5 pl-1">
+                <ul className="space-y-3.5 pl-1 text-sm md:text-xs">
                   <li className="flex items-start gap-2.5">
                     <span className="text-emerald-400 font-mono font-bold shrink-0 mt-0.5">CMV:</span>
                     <span>
@@ -750,7 +760,7 @@ export default function App() {
                 </ul>
 
                 <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-4 text-center my-4">
-                  <div className="text-[10px] text-slate-500 font-mono uppercase tracking-widest mb-1.5">FÓRMULA SECRETA DO SALÃO</div>
+                  <div className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-widest mb-1.5">FÓRMULA SECRETA DO SALÃO</div>
                   <div className="text-sm sm:text-base font-mono font-bold text-white">
                     CMV + CFI + Lucro Escolhido = <span className="text-emerald-400">Preço de Venda na Loja</span>
                   </div>
@@ -772,7 +782,7 @@ export default function App() {
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
+                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[11px] md:text-[10px] text-slate-400 font-mono border border-zinc-800">
                   Ilustração: A Fórmula do Preço Perfeito
                 </div>
               </div>
@@ -790,7 +800,7 @@ export default function App() {
             {/* Coluna da Esquerda: Textos de Dor e Conteúdo */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
                   🍳 Controle da Cozinha
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white leading-tight">
@@ -798,7 +808,7 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+              <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
                   O Lucro Fácil tem uma área inteira focada exclusivamente no controle do seu CMV. Chega de ver o dinheiro sumir pelo ralo do desperdício!
                 </p>
@@ -821,7 +831,7 @@ export default function App() {
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
+                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[11px] md:text-[10px] text-slate-400 font-mono border border-zinc-800">
                   Ilustração: Controle Total de CMV
                 </div>
               </div>
@@ -839,7 +849,7 @@ export default function App() {
             {/* Coluna da Esquerda: Textos de Dor e Conteúdo */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
                   📊 Ecossistema Financeiro
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white leading-tight">
@@ -847,7 +857,7 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
+              <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
                   O Lucro Fácil é um ecossistema financeiro completo e feito para quem não tempo a perder. Chega de abrir dez planilhas para saber se tem conta vencendo!
                 </p>
@@ -855,7 +865,7 @@ export default function App() {
                   O sistema funciona todo dividido em abas separadas e limpas, totalmente integradas com o seu CFI:
                 </p>
                 
-                <ul className="space-y-3.5 pl-1">
+                <ul className="space-y-3.5 pl-1 text-sm md:text-xs">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-mono font-bold">📁</span>
                     <span>
@@ -892,7 +902,7 @@ export default function App() {
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
+                <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[11px] md:text-[10px] text-slate-400 font-mono border border-zinc-800">
                   Ilustração: Fluxo de Caixa Integrado
                 </div>
               </div>
@@ -906,13 +916,13 @@ export default function App() {
       <section id="playground-preco-perfeito" className="py-20 md:py-24 bg-zinc-950 border-t border-zinc-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
               🎮 Interativo
             </span>
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
               O Playground do Preço Perfeito
             </h2>
-            <p className="text-slate-400 text-sm max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-400 text-base md:text-sm max-w-2xl mx-auto leading-relaxed">
               Explore o ecossistema vivo do Lucro Fácil. Monte combos, ajuste custos e comissões, e veja como protegemos sua margem em tempo real.
             </p>
           </div>
@@ -925,11 +935,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs text-emerald-400 font-bold uppercase tracking-widest font-mono block mb-2">PLAYGROUND INTERATIVO</span>
+            <span className="text-sm md:text-xs text-emerald-400 font-bold uppercase tracking-widest font-mono block mb-2">PLAYGROUND INTERATIVO</span>
             <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white">
               Veja a diferença matemática entre o Improviso e a Blindagem do Lucro Fácil
             </h2>
-            <p className="text-slate-400 text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-slate-400 text-base md:text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
               Clique nas abas abaixo para interagir com o motor matemático do Lucro Fácil e entender como protegemos cada centavo da sua operação de alimentação.
             </p>
           </div>
@@ -1057,36 +1067,36 @@ export default function App() {
             
             {/* Diferencial 1 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)] transition-all">
-              <span className="text-xs text-emerald-400 font-mono font-bold block mb-1">CÁLCULO EM CASCATA</span>
+              <span className="text-[11px] md:text-[10px] text-emerald-400 font-mono font-bold block mb-1">CÁLCULO EM CASCATA</span>
               <h3 className="font-bold text-white text-base mb-2">Efeito Cascata (Cascade)</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                 O preço do tomate ou do óleo subiu no fornecedor? Mude uma única vez e o sistema atualiza de imediato o custo de todas as pizzas e molhos que levam aquele item.
               </p>
             </div>
 
             {/* Diferencial 2 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)] transition-all">
-              <span className="text-xs text-emerald-400 font-mono font-bold block mb-1">AUDITORIA ATIVA</span>
+              <span className="text-[11px] md:text-[10px] text-emerald-400 font-mono font-bold block mb-1">AUDITORIA ATIVA</span>
               <h3 className="font-bold text-white text-base mb-2">Alerta do "Campeão Magro"</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                 O prato que você mais vende está com margem baixa de lucro líquido? O sistema te avisa e sugere o reajuste no mesmo instante.
               </p>
             </div>
 
             {/* Diferencial 3 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)] transition-all">
-              <span className="text-xs text-emerald-400 font-mono font-bold block mb-1">ESTABILIDADE SENSÍVEL</span>
+              <span className="text-[11px] md:text-[10px] text-emerald-400 font-mono font-bold block mb-1">ESTABILIDADE SENSÍVEL</span>
               <h3 className="font-bold text-white text-base mb-2">Tecnologia que Não Trava</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                 O sistema opera com uma tecnologia ativa que não cai nem desloga, mesmo com a internet oscilando na correria da cozinha.
               </p>
             </div>
 
             {/* Diferencial 4 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.12)] transition-all">
-              <span className="text-xs text-emerald-400 font-mono font-bold block mb-1">INTEGRAÇÃO PIX</span>
+              <span className="text-[11px] md:text-[10px] text-emerald-400 font-mono font-bold block mb-1">INTEGRAÇÃO PIX</span>
               <h3 className="font-bold text-white text-base mb-2">Destravamento via Pix</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
                 Ao assinar ou renovar, a liberação de todo o sistema é automática e acontece em menos de um segundo pelo Pix.
               </p>
             </div>
@@ -1106,22 +1116,22 @@ export default function App() {
               <Bookmark className="w-6 h-6" />
             </span>
             <div>
-              <span className="bg-emerald-500/15 text-emerald-400 text-[10px] px-2 py-0.5 rounded font-extrabold uppercase font-mono inline-block mb-3.5 border border-emerald-500/30">
+              <span className="bg-emerald-500/15 text-emerald-400 text-[11px] md:text-[10px] px-2 py-0.5 rounded font-extrabold uppercase font-mono inline-block mb-3.5 border border-emerald-500/30">
                 BÔNUS INCLUSO 🎁
               </span>
               <h3 className="text-xl md:text-2xl font-display font-extrabold text-white leading-tight">
                 BÔNUS INCLUSO: Guia Estratégico de Combos Salva-Margem 📘
               </h3>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed max-w-xl">
+              <p className="text-sm md:text-xs text-slate-400 mt-2 leading-relaxed max-w-xl">
                 Aprenda a criar combos inteligentes cruzando o sucesso do prato "Campeão" com a lucratividade do prato "Parado", sem queimar a margem do caixa do restaurante.
               </p>
             </div>
           </div>
 
           <div className="shrink-0 text-center md:text-right space-y-2">
-            <span className="bg-zinc-900 border border-zinc-800 text-xs text-slate-400 px-3 py-1 rounded-full inline-block font-mono">Manual avaliado em R$ 197,00</span>
+            <span className="bg-zinc-900 border border-zinc-800 text-sm md:text-xs text-slate-400 px-3 py-1 rounded-full inline-block font-mono">Manual avaliado em R$ 197,00</span>
             <span className="text-xl font-bold text-emerald-400 block font-mono">R$ 0,00 (Totalmente Grátis)</span>
-            <span className="text-[10px] text-slate-400 block font-medium">Incluso em todos os planos de assinatura.</span>
+            <span className="text-[11px] md:text-[10px] text-slate-400 block font-medium">Incluso em todos os planos de assinatura.</span>
           </div>
         </div>
       </section>
@@ -1162,7 +1172,7 @@ export default function App() {
                 }`}
               >
                 <span>ANUAL</span>
-                <span className={`text-[9px] px-1.5 py-0.5 rounded font-extrabold ${
+                <span className={`text-[10px] md:text-[9px] px-1.5 py-0.5 rounded font-extrabold ${
                   isAnnual 
                     ? 'bg-zinc-950 text-emerald-400 border border-emerald-500/20' 
                     : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
@@ -1179,20 +1189,20 @@ export default function App() {
             {/* PLAN 1: STARTER */}
             <div className="bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between hover:scale-101 transition-all relative">
               <div>
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono">STARTER</span>
+                <span className="text-[11px] md:text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono">STARTER</span>
                 <h3 className="text-lg font-bold text-white mt-1">Restaurantes Iniciantes</h3>
-                <p className="text-xs text-slate-400 mt-2">Perfeito para pequenas operações locais e deliveries iniciantes saírem do chutômetro.</p>
+                <p className="text-sm md:text-xs text-slate-400 mt-2">Perfeito para pequenas operações locais e deliveries iniciantes saírem do chutômetro.</p>
 
                 {/* Preço */}
                 <div className="my-6">
-                  <span className="text-slate-500 text-xs">R$</span>
+                  <span className="text-slate-500 text-sm md:text-xs">R$</span>
                   <span className="text-3xl font-bold text-white font-mono">{isAnnual ? '23,90' : '29,90'}</span>
-                  <span className="text-slate-500 text-xs font-mono"> / mês</span>
-                  {isAnnual && <span className="text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 286,80</span>}
+                  <span className="text-slate-500 text-sm md:text-xs font-mono"> / mês</span>
+                  {isAnnual && <span className="text-[11px] md:text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 286,80</span>}
                 </div>
 
                 {/* Recursos */}
-                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-xs text-slate-300">
+                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-sm md:text-xs text-slate-300">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>Cadastro de <strong>1 Loja/Filial</strong></span>
@@ -1218,8 +1228,10 @@ export default function App() {
 
               <div className="mt-8 pt-6 border-t border-zinc-900">
                 <a 
-                  href="#playground" 
-                  className="block w-full text-center py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white rounded-xl text-xs font-bold transition-all"
+                  href="https://lucro-facil.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white rounded-xl text-sm md:text-xs font-bold transition-all"
                 >
                   Testar Starter Grátis
                 </a>
@@ -1228,24 +1240,24 @@ export default function App() {
 
             {/* PLAN 2: GROWTH (MAIS POPULAR) */}
             <div className="bg-zinc-950 border-2 border-emerald-500 rounded-2xl p-6 flex flex-col justify-between hover:scale-101 transition-all relative">
-              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[10px] font-extrabold uppercase px-3 py-0.5 rounded-full border border-emerald-400 tracking-wider">
+              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[11px] md:text-[10px] font-extrabold uppercase px-3 py-0.5 rounded-full border border-emerald-400 tracking-wider">
                 MAIS POPULAR / RECOMENDADO
               </span>
               <div>
-                <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest font-mono">GROWTH</span>
+                <span className="text-[11px] md:text-[10px] font-bold text-emerald-400 uppercase tracking-widest font-mono">GROWTH</span>
                 <h3 className="text-lg font-bold text-white mt-1">Operações em Rampa</h3>
-                <p className="text-xs text-slate-400 mt-2">Para restaurantes em crescimento que buscam inteligência de verdade e conselhos do Xande.</p>
+                <p className="text-sm md:text-xs text-slate-400 mt-2">Para restaurantes em crescimento que buscam inteligência de verdade e conselhos do Xande.</p>
 
                 {/* Preço */}
                 <div className="my-6">
-                  <span className="text-slate-500 text-xs">R$</span>
+                  <span className="text-slate-500 text-sm md:text-xs">R$</span>
                   <span className="text-4xl font-bold text-emerald-400 font-mono">{isAnnual ? '39,90' : '49,90'}</span>
-                  <span className="text-slate-500 text-xs font-mono"> / mês</span>
-                  {isAnnual && <span className="text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 478,80</span>}
+                  <span className="text-slate-500 text-sm md:text-xs font-mono"> / mês</span>
+                  {isAnnual && <span className="text-[11px] md:text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 478,80</span>}
                 </div>
 
                 {/* Recursos */}
-                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-xs text-slate-300">
+                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-sm md:text-xs text-slate-300">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>Cadastro de até <strong>5 Lojas/Filiais</strong></span>
@@ -1279,8 +1291,10 @@ export default function App() {
 
               <div className="mt-8 pt-6 border-t border-zinc-900">
                 <a 
-                  href="#playground" 
-                  className="block w-full text-center py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl text-xs font-extrabold transition-all shadow-lg shadow-emerald-500/10"
+                  href="https://lucro-facil.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl text-sm md:text-xs font-extrabold transition-all shadow-lg shadow-emerald-500/10"
                 >
                   Testar Growth Grátis por 14 Dias
                 </a>
@@ -1290,20 +1304,20 @@ export default function App() {
             {/* PLAN 3: PRO */}
             <div className="bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between hover:scale-101 transition-all relative">
               <div>
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono">PRO</span>
+                <span className="text-[11px] md:text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono">PRO</span>
                 <h3 className="text-lg font-bold text-white mt-1">Grandes Redes e Franquias</h3>
-                <p className="text-xs text-slate-400 mt-2">Para quem tem alta escala e não quer nenhuma barreira operacional.</p>
+                <p className="text-sm md:text-xs text-slate-400 mt-2">Para quem tem alta escala e não quer nenhuma barreira operacional.</p>
 
                 {/* Preço */}
                 <div className="my-6">
-                  <span className="text-slate-500 text-xs">R$</span>
+                  <span className="text-slate-500 text-sm md:text-xs">R$</span>
                   <span className="text-3xl font-bold text-white font-mono">{isAnnual ? '47,90' : '59,90'}</span>
-                  <span className="text-slate-500 text-xs font-mono"> / mês</span>
-                  {isAnnual && <span className="text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 574,80</span>}
+                  <span className="text-slate-500 text-sm md:text-xs font-mono"> / mês</span>
+                  {isAnnual && <span className="text-[11px] md:text-[10px] text-emerald-400 block font-mono mt-1">Cobrado anualmente por R$ 574,80</span>}
                 </div>
 
                 {/* Recursos */}
-                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-xs text-slate-300">
+                <ul className="space-y-3 pt-6 border-t border-zinc-900 text-sm md:text-xs text-slate-300">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span><strong>Lojas e Filiais Ilimitadas</strong></span>
@@ -1333,8 +1347,10 @@ export default function App() {
 
               <div className="mt-8 pt-6 border-t border-zinc-900">
                 <a 
-                  href="#playground" 
-                  className="block w-full text-center py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white rounded-xl text-xs font-bold transition-all"
+                  href="https://lucro-facil.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-white rounded-xl text-sm md:text-xs font-bold transition-all"
                 >
                   Testar Pro Grátis
                 </a>
@@ -1366,7 +1382,7 @@ export default function App() {
             <p>
               Se você fizer apenas <strong className="text-white">15 pedidos de delivery por dia</strong> no mês inteiro, o Lucro Fácil já salvou <strong className="text-emerald-400">R$ 900,00 que iriam direto para o ralo</strong>. Isso paga o plano anual do sistema inteiro e ainda sobra dinheiro para você investir na sua rampa!
             </p>
-            <p className="text-xs text-slate-400 pt-4">
+            <p className="text-[11px] md:text-[10px] text-slate-400 pt-4">
               É por isso que nós não cobramos taxa de cancelamento e nem exigimos fidelidade de contrato. Nós temos tanta certeza do valor que vamos gerar para o seu restaurante que se você não ver o seu lucro crescer na primeira semana, você pode cancelar com um único clique.
             </p>
           </div>
@@ -1389,7 +1405,7 @@ export default function App() {
             
             {/* Depoimento 1 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
-              <p className="text-xs text-slate-300 leading-relaxed italic">
+              <p className="text-sm md:text-xs text-slate-300 leading-relaxed italic">
                 "Eu vendia quase R$ 45 mil por mês no iFood e vivia com a conta zerada. Achava que o problema era o aplicativo, mas quando usei a calculadora do Lucro Fácil, vi que estava errando o preço do meu combo por R$ 6,00 de diferença! Ajustei o preço pelo Markup Inverso e, já no primeiro mês, sobraram R$ 4.200 líquidos a mais na minha conta."
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-zinc-900 pt-4">
@@ -1397,15 +1413,15 @@ export default function App() {
                   RC
                 </div>
                 <div>
-                  <h4 className="font-bold text-xs text-white">Rodrigo Carvalho</h4>
-                  <p className="text-[10px] text-slate-500">Dono do Burger & Cia – Delivery</p>
+                  <h4 className="font-bold text-sm md:text-xs text-white">Rodrigo Carvalho</h4>
+                  <p className="text-[11px] md:text-[10px] text-slate-500">Dono do Burger & Cia – Delivery</p>
                 </div>
               </div>
             </div>
 
             {/* Depoimento 2 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
-              <p className="text-xs text-slate-300 leading-relaxed italic">
+              <p className="text-sm md:text-xs text-slate-300 leading-relaxed italic">
                 "Fazer ficha técnica de restaurante de quilo era um inferno, ninguém tem tempo de pesar 30 pratos todo dia. Com o Módulo de Buffet por Média de Equilíbrio, eu só coloco a proporção de comida leve e pesada e as perdas de cuba. O sistema me deu o preço exato do quilo para cobrir a alta da carne bovina. Prático e sem frescura!"
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-zinc-900 pt-4">
@@ -1413,15 +1429,15 @@ export default function App() {
                   MS
                 </div>
                 <div>
-                  <h4 className="font-bold text-xs text-white">Mariana Santos</h4>
-                  <p className="text-[10px] text-slate-500">Restaurante Sabores do Sul – Self-Service</p>
+                  <h4 className="font-bold text-sm md:text-xs text-white">Mariana Santos</h4>
+                  <p className="text-[11px] md:text-[10px] text-slate-500">Restaurante Sabores do Sul – Self-Service</p>
                 </div>
               </div>
             </div>
 
             {/* Depoimento 3 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
-              <p className="text-xs text-slate-300 leading-relaxed italic">
+              <p className="text-sm md:text-xs text-slate-300 leading-relaxed italic">
                 "O Xande IA salvou meu estoque. Perguntei para ele como criar um combo para girar uma marca de queijo que estava parando, e ele me deu a receita exata do combo em segundos, sem queimar minha margem. Abandonei de vez as planilhas chatas."
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-zinc-900 pt-4">
@@ -1429,8 +1445,8 @@ export default function App() {
                   AO
                 </div>
                 <div>
-                  <h4 className="font-bold text-xs text-white">Alexandre Oliveira</h4>
-                  <p className="text-[10px] text-slate-500">Pizzaria Bella Itália – Salão e Delivery</p>
+                  <h4 className="font-bold text-sm md:text-xs text-white">Alexandre Oliveira</h4>
+                  <p className="text-[11px] md:text-[10px] text-slate-500">Pizzaria Bella Itália – Salão e Delivery</p>
                 </div>
               </div>
             </div>
@@ -1468,7 +1484,7 @@ export default function App() {
                   </button>
                   
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs text-slate-300 leading-relaxed border-t border-zinc-900">
+                    <div className="px-5 pb-5 pt-1 text-sm md:text-xs text-slate-300 leading-relaxed border-t border-zinc-900">
                       {faq.answer}
                     </div>
                   )}
@@ -1491,20 +1507,22 @@ export default function App() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight max-w-3xl mx-auto">
             Proteja as margens do seu restaurante hoje mesmo
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed mt-4">
+          <p className="text-sm md:text-xs text-slate-400 max-w-xl mx-auto leading-relaxed mt-4">
             Substitua a adivinhação do caixa por regras rígidas de Markup Inverso e consultoria de IA em milissegundos. Pare de pagar taxas de marketplaces com o seu esforço.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
-              href="#pricing"
+              href="https://lucro-facil.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 flex items-center justify-center gap-2 group cursor-pointer"
             >
               🔐 QUERO BLINDAR MEU CAIXA AGORA
             </a>
           </div>
 
-          <div className="mt-6 flex justify-center items-center gap-4 text-[10px] text-slate-500 font-mono">
+          <div className="mt-6 flex justify-center items-center gap-4 text-[11px] md:text-[10px] text-slate-500 font-mono">
             <span>Teste de 14 dias sem compromisso</span>
             <span>•</span>
             <span>Cancele a qualquer momento</span>
@@ -1513,7 +1531,7 @@ export default function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-zinc-950 border-t border-zinc-900 py-12 text-slate-500 text-xs">
+      <footer className="bg-zinc-950 border-t border-zinc-900 py-12 text-slate-500 text-sm md:text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center font-bold shadow-lg shadow-emerald-500/5 border border-emerald-500/20 relative w-9 h-9">
@@ -1522,7 +1540,7 @@ export default function App() {
             </div>
             <span className="font-display font-bold text-white">Lucro Fácil</span>
           </div>
-          <p className="text-center md:text-right text-[11px] leading-relaxed">
+          <p className="text-center md:text-right text-[12px] md:text-[11px] leading-relaxed">
             Lucro Fácil &copy; 2026 Lucro Fácil SaaS Ltda. Todos os direitos reservados. <br />
             A plataforma definitiva de engenharia de cardápio e precificação inteligente que blinda as margens e garante lucro real no caixa.
           </p>

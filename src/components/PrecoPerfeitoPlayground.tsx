@@ -97,7 +97,7 @@ export default function PrecoPerfeitoPlayground() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm md:text-xs font-bold rounded-lg border border-emerald-500/20 font-mono uppercase tracking-wider">
                 🍔 Inteligência Comercial
               </span>
               <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-tight">
@@ -120,7 +120,7 @@ export default function PrecoPerfeitoPlayground() {
                     <span className="text-xl">🔥</span>
                     <strong className="text-white text-xs sm:text-sm">Oferta Salva-Margem</strong>
                   </div>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-sm md:text-xs text-slate-400">
                     O sistema te ajuda a pegar um produto "magro" (de margem baixa) e juntar com um "Produto Turbinado" (baixo custo e alto lucro, como batata frita ou refrigerante). O tíquete médio da venda sobe e a sua margem de lucro fica totalmente protegida.
                   </p>
                 </div>
@@ -130,7 +130,7 @@ export default function PrecoPerfeitoPlayground() {
                     <span className="text-xl">💣</span>
                     <strong className="text-white text-xs sm:text-sm">Bomba de Vendas</strong>
                   </div>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-sm md:text-xs text-slate-400">
                     Uma combinação perfeita focada em estourar o volume de saídas do seu estoque parado, sem sacrificar um único centavo do seu caixa.
                   </p>
                 </div>
@@ -145,53 +145,53 @@ export default function PrecoPerfeitoPlayground() {
           {/* Lado Direito: Representação visual dos combos */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 w-full max-w-sm space-y-4 shadow-xl relative overflow-hidden">
-              <div className="absolute top-2 right-2 bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider font-bold">
+              <div className="absolute top-2 right-2 bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[11px] md:text-[10px] font-mono uppercase tracking-wider font-bold">
                 Combo Criado!
               </div>
 
               <div className="space-y-1">
-                <span className="text-[10px] text-slate-500 font-mono uppercase tracking-widest font-bold">Estrutura de Combo Smart</span>
+                <span className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-widest font-bold">Estrutura de Combo Smart</span>
                 <h4 className="text-base font-bold text-white">Combo Smash Premium + Frita</h4>
               </div>
 
               <div className="space-y-2.5 pt-3 border-t border-zinc-900">
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <span className="text-slate-400">🍔 Smash Burguer (Prato Principal)</span>
                   <span className="text-slate-300 font-mono">CMV: R$ 8,50</span>
                 </div>
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <span className="text-slate-400">🍟 Batata Frita (Produto Turbinado)</span>
                   <span className="text-emerald-400 font-semibold font-mono">CMV: R$ 1,80</span>
                 </div>
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <span className="text-slate-400">🥤 Embalagem Smart</span>
                   <span className="text-slate-300 font-mono">CMV: R$ 1,50</span>
                 </div>
               </div>
 
               <div className="bg-zinc-900/50 rounded-xl p-3 space-y-1.5 border border-zinc-800/50">
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <span className="text-slate-400">Custo Total (CMV):</span>
                   <span className="text-white font-mono font-bold">R$ 11,80</span>
                 </div>
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <span className="text-slate-400">Margem Alvo:</span>
                   <span className="text-emerald-400 font-mono font-bold">28,0% Líquido</span>
                 </div>
-                <div className="flex justify-between items-center text-xs pt-1.5 border-t border-zinc-800">
-                  <span className="text-xs font-bold text-slate-300">Cobrar no Salão:</span>
+                <div className="flex justify-between items-center text-sm md:text-xs pt-1.5 border-t border-zinc-800">
+                  <span className="text-sm md:text-xs font-bold text-slate-300">Cobrar no Salão:</span>
                   <span className="text-sm font-bold text-emerald-400 font-mono">R$ 30,26</span>
                 </div>
               </div>
 
               <div className="flex gap-2">
                 <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center">
-                  <span className="text-[9px] text-slate-500 font-mono block">iFood Tradicional</span>
-                  <span className="text-xs text-white font-bold font-mono">R$ 42,32</span>
+                  <span className="text-[10px] md:text-[9px] text-slate-500 font-mono block">iFood Tradicional</span>
+                  <span className="text-sm md:text-xs text-white font-bold font-mono">R$ 42,32</span>
                 </div>
                 <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center">
-                  <span className="text-[9px] text-slate-500 font-mono block">Keeta Delivery</span>
-                  <span className="text-xs text-white font-bold font-mono">R$ 40,35</span>
+                  <span className="text-[10px] md:text-[9px] text-slate-500 font-mono block">Keeta Delivery</span>
+                  <span className="text-sm md:text-xs text-white font-bold font-mono">R$ 40,35</span>
                 </div>
               </div>
             </div>
@@ -219,11 +219,11 @@ export default function PrecoPerfeitoPlayground() {
             
             {/* Lado Esquerdo: Controles / Entradas */}
             <div className="lg:col-span-4 space-y-5 bg-zinc-900/30 border border-zinc-850 p-5 rounded-2xl">
-              <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Painel de Entrada de Dados</span>
+              <span className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Painel de Entrada de Dados</span>
 
               {/* Campo 1: Custo do Lanche */}
               <div className="space-y-1.5">
-                <label className="block text-xs font-bold text-slate-300">
+                <label className="block text-sm md:text-xs font-bold text-slate-300">
                   Custo do seu Lanche (CMV de Insumos + Embalagem)
                 </label>
                 <div className="relative">
@@ -241,7 +241,7 @@ export default function PrecoPerfeitoPlayground() {
 
               {/* Campo 2: Margem de Lucro */}
               <div className="space-y-1.5">
-                <div className="flex justify-between items-center text-xs">
+                <div className="flex justify-between items-center text-sm md:text-xs">
                   <label className="font-bold text-slate-300">Quanto de Lucro Limpo você quer no bolso?</label>
                   <span className="text-emerald-400 font-mono font-bold">{targetMargin}%</span>
                 </div>
@@ -253,7 +253,7 @@ export default function PrecoPerfeitoPlayground() {
                   onChange={(e) => setTargetMargin(parseInt(e.target.value) || 5)}
                   className="w-full accent-emerald-500 bg-zinc-800 h-1 rounded-lg appearance-none cursor-pointer"
                 />
-                <div className="flex justify-between text-[9px] text-slate-500 font-mono">
+                <div className="flex justify-between text-[10px] md:text-[9px] text-slate-500 font-mono">
                   <span>5% (Mínimo)</span>
                   <span>25% (Padrão)</span>
                   <span>40% (Alto)</span>
@@ -262,12 +262,12 @@ export default function PrecoPerfeitoPlayground() {
 
               {/* Campo 3: Plano do iFood */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-300">Escolha o Plano do iFood</label>
+                <label className="block text-sm md:text-xs font-bold text-slate-300">Escolha o Plano do iFood</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
                     onClick={() => setIfoodPlan('own')}
-                    className={`px-3 py-2 rounded-lg text-xs font-semibold border transition-all cursor-pointer text-center ${
+                    className={`px-3 py-2 rounded-lg text-sm md:text-xs font-semibold border transition-all cursor-pointer text-center ${
                       ifoodPlan === 'own'
                         ? 'bg-emerald-500 text-zinc-950 border-emerald-400 font-bold'
                         : 'bg-zinc-950 text-slate-400 border-zinc-800 hover:text-slate-200'
@@ -278,7 +278,7 @@ export default function PrecoPerfeitoPlayground() {
                   <button
                     type="button"
                     onClick={() => setIfoodPlan('partner')}
-                    className={`px-3 py-2 rounded-lg text-xs font-semibold border transition-all cursor-pointer text-center ${
+                    className={`px-3 py-2 rounded-lg text-sm md:text-xs font-semibold border transition-all cursor-pointer text-center ${
                       ifoodPlan === 'partner'
                         ? 'bg-emerald-500 text-zinc-950 border-emerald-400 font-bold'
                         : 'bg-zinc-950 text-slate-400 border-zinc-800 hover:text-slate-200'
@@ -292,8 +292,8 @@ export default function PrecoPerfeitoPlayground() {
               {/* Campo 4: Antecipar Repasse */}
               <div className="flex items-center justify-between p-2.5 bg-zinc-950/40 border border-zinc-800/80 rounded-xl">
                 <div className="space-y-0.5">
-                  <span className="text-xs font-bold text-slate-300 block">Antecipar Repasse Semanal?</span>
-                  <span className="text-[10px] text-slate-500 block">Acréscimo de comissão de 2%</span>
+                  <span className="text-sm md:text-xs font-bold text-slate-300 block">Antecipar Repasse Semanal?</span>
+                  <span className="text-[11px] md:text-[10px] text-slate-500 block">Acréscimo de comissão de 2%</span>
                 </div>
                 <div className="flex gap-1">
                   <button
@@ -320,8 +320,8 @@ export default function PrecoPerfeitoPlayground() {
               {/* Campo 5: Campanha Inteligente */}
               <div className="flex items-center justify-between p-2.5 bg-zinc-950/40 border border-zinc-800/80 rounded-xl">
                 <div className="space-y-0.5">
-                  <span className="text-xs font-bold text-slate-300 block">Participa de Campanha Inteligente?</span>
-                  <span className="text-[10px] text-slate-500 block">Adiciona R$ 5,00 de desconto</span>
+                  <span className="text-sm md:text-xs font-bold text-slate-300 block">Participa de Campanha Inteligente?</span>
+                  <span className="text-[11px] md:text-[10px] text-slate-500 block">Adiciona R$ 5,00 de desconto</span>
                 </div>
                 <div className="flex gap-1">
                   <button
@@ -350,17 +350,17 @@ export default function PrecoPerfeitoPlayground() {
             {/* Lado Direito: Resultados / Tabela de Preços */}
             <div className="lg:col-span-8 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">
+                <span className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">
                   A Tabela de Resultados: "É só Copiar e Colar"
                 </span>
-                <span className="text-[10px] text-emerald-400 font-mono font-semibold flex items-center gap-1">
+                <span className="text-[11px] md:text-[10px] text-emerald-400 font-mono font-semibold flex items-center gap-1">
                   <RefreshCw className="w-3 h-3 animate-spin" /> Atualizando ao vivo
                 </span>
               </div>
 
               {/* Tabela de Resultados */}
               <div className="overflow-x-auto border border-zinc-800 rounded-xl bg-zinc-950/60">
-                <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                <table className="w-full text-left text-sm border-collapse">
                   <thead>
                     <tr className="border-b border-zinc-800 bg-zinc-900/40 font-semibold text-slate-400">
                       <th className="p-3">Canal de Venda</th>
@@ -376,13 +376,13 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🏪</span> Na sua Loja / Salão
                       </td>
-                      <td className="p-3 text-slate-400 text-xs hidden md:table-cell font-mono">
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
                         Custo (CMV) + Estrutura (CFI 33%) + Seu Lucro ({targetMargin}%)
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-emerald-400 text-sm sm:text-base">
                         R$ {results.lojaPrice.toFixed(2)}
                       </td>
-                      <td className="p-3 text-right text-xs text-slate-300 hidden sm:table-cell">
+                      <td className="p-3 text-right text-sm md:text-xs text-slate-300 hidden sm:table-cell">
                         Você ganha seus <strong className="text-white">{targetMargin}%</strong> limpos e todas as contas da loja pagas.
                       </td>
                       <td className="p-3 text-center">
@@ -401,13 +401,13 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🛵</span> iFood Tradicional
                       </td>
-                      <td className="p-3 text-slate-400 text-xs hidden md:table-cell font-mono">
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
                         Markup Inverso aplicando as taxas de {(results.ifoodRate * 100).toFixed(1)}% + taxa de antecipação
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.ifoodTradicionalPrice.toFixed(2)}
                       </td>
-                      <td className="p-3 text-right text-xs text-slate-300 hidden sm:table-cell">
+                      <td className="p-3 text-right text-sm md:text-xs text-slate-300 hidden sm:table-cell">
                         O cliente paga a taxa. Você recebe os mesmos <strong className="text-emerald-400">R$ {results.lojaPrice.toFixed(2)}</strong> da loja.
                       </td>
                       <td className="p-3 text-center">
@@ -426,13 +426,13 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🚀</span> iFood com Campanha
                       </td>
-                      <td className="p-3 text-slate-400 text-xs hidden md:table-cell font-mono">
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
                         Sistema embute os R$ {campanha ? '5,00' : '0,00'} da campanha no cálculo reverso**
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.ifoodCampanhaPrice.toFixed(2)}
                       </td>
-                      <td className="p-3 text-right text-xs text-slate-300 hidden sm:table-cell">
+                      <td className="p-3 text-right text-sm md:text-xs text-slate-300 hidden sm:table-cell">
                         O iFood dá o desconto, mas quem paga é a matemática. Sua margem continua intacta.
                       </td>
                       <td className="p-3 text-center">
@@ -451,13 +451,13 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🔴</span> 99Food
                       </td>
-                      <td className="p-3 text-slate-400 text-xs hidden md:table-cell font-mono">
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
                         Motor calcula a taxa de comissão de {(results.food99Rate * 100).toFixed(1)}% da plataforma
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.food99Price.toFixed(2)}
                       </td>
-                      <td className="p-3 text-right text-xs text-slate-300 hidden sm:table-cell">
+                      <td className="p-3 text-right text-sm md:text-xs text-slate-300 hidden sm:table-cell">
                         Margem 100% protegida contra as taxas da 99.
                       </td>
                       <td className="p-3 text-center">
@@ -476,13 +476,13 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🔵</span> Keeta
                       </td>
-                      <td className="p-3 text-slate-400 text-xs hidden md:table-cell font-mono">
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
                         Inversão milimétrica com taxas de {(results.keetaRate * 100).toFixed(1)}% da Keeta
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.keetaPrice.toFixed(2)}
                       </td>
-                      <td className="p-3 text-right text-xs text-slate-300 hidden sm:table-cell">
+                      <td className="p-3 text-right text-sm md:text-xs text-slate-300 hidden sm:table-cell">
                         Sem surpresas no extrato da Keeta ao fim do mês.
                       </td>
                       <td className="p-3 text-center">
@@ -505,8 +505,8 @@ export default function PrecoPerfeitoPlayground() {
                   <ShieldCheck className="w-5 h-5" />
                 </span>
                 <div className="space-y-1">
-                  <h4 className="text-xs font-bold text-white">Blindagem Ativa: O Markup Inverso do Lucro Fácil em Ação</h4>
-                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                  <h4 className="text-sm md:text-xs font-bold text-white">Blindagem Ativa: O Markup Inverso do Lucro Fácil em Ação</h4>
+                  <p className="text-xs md:text-[11px] text-slate-400 leading-relaxed">
                     Você reparou que nos aplicativos o preço sobe? Isso ocorre porque o <strong className="text-emerald-400">Lucro Fácil</strong> joga todas as taxas e descontos nos ombros dos aplicativos e dos clientes finais. Você recebe limpo exatamente os <strong className="text-white">R$ {results.lojaPrice.toFixed(2)}</strong> necessários para pagar seus ingredientes (CMV), sua estrutura física (CFI 33%) e guardar seus <strong className="text-emerald-400">{targetMargin}% de lucro no bolso</strong>.
                   </p>
                 </div>
@@ -524,7 +524,7 @@ export default function PrecoPerfeitoPlayground() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-8 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-cyan-500/15 text-cyan-400 text-xs font-bold rounded-lg border border-cyan-500/25 font-mono uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-cyan-500/15 text-cyan-400 text-sm md:text-xs font-bold rounded-lg border border-cyan-500/25 font-mono uppercase tracking-wider">
               🔄 Tudo Conectado
             </span>
             <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-tight">
@@ -547,12 +547,12 @@ export default function PrecoPerfeitoPlayground() {
                 <RefreshCw className="w-6 h-6 animate-spin" style={{ animationDuration: '6s' }} />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Subida de Insumo Simulado:</span>
-                <div className="text-xs text-slate-300">
+                <span className="text-[11px] md:text-[10px] text-slate-500 font-mono uppercase tracking-wider block font-bold">Subida de Insumo Simulado:</span>
+                <div className="text-sm md:text-xs text-slate-300">
                   🍞 Pão de Hambúrguer: <span className="text-red-400 line-through">R$ 1,20</span> ➔ <span className="text-emerald-400 font-bold">R$ 1,45</span>
                 </div>
               </div>
-              <div className="text-[10px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-2 rounded font-mono font-medium leading-normal">
+              <div className="text-[11px] md:text-[10px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-2 rounded font-mono font-medium leading-normal">
                 ✔ 12 Lanches Atualizados <br />
                 ✔ 4 Combos Recalculados <br />
                 ✔ Preços nos Apps Blindados!

@@ -75,8 +75,13 @@ export default function XandeChatDemo() {
   const [isTyping, setIsTyping] = useState<boolean>(false);
   const [customInput, setCustomInput] = useState<string>('');
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
 
@@ -138,7 +143,7 @@ export default function XandeChatDemo() {
       });
 
       return (
-        <p key={idx} className="text-xs leading-relaxed text-slate-300 mb-2">
+        <p key={idx} className="text-sm md:text-xs leading-relaxed text-slate-300 mb-2">
           {formattedParts}
         </p>
       );
@@ -164,14 +169,14 @@ export default function XandeChatDemo() {
           <div>
             <div className="flex items-center gap-1.5">
               <h4 className="font-display font-bold text-sm text-white">Xande IA</h4>
-              <span className="bg-emerald-500/10 text-emerald-400 text-[10px] px-1.5 py-0.5 rounded-full font-semibold border border-emerald-500/20 flex items-center gap-0.5">
+              <span className="bg-emerald-500/10 text-emerald-400 text-[11px] md:text-[10px] px-1.5 py-0.5 rounded-full font-semibold border border-emerald-500/20 flex items-center gap-0.5">
                 <Sparkles className="w-2.5 h-2.5" /> Consultor Ativo
               </span>
             </div>
-            <p className="text-[10px] text-slate-400">Inteligência de Precificação e Rampa</p>
+            <p className="text-[11px] md:text-[10px] text-slate-400">Inteligência de Precificação e Rampa</p>
           </div>
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
+        <div className="flex items-center gap-1.5 text-sm md:text-xs text-slate-500 font-mono">
           <span className="w-2 h-2 bg-emerald-500 rounded-full" />
           <span>Xande conectado</span>
         </div>
@@ -203,7 +208,7 @@ export default function XandeChatDemo() {
                   />
                 )}
               </div>
-              <div className={`rounded-xl px-3.5 py-2.5 border text-xs shadow-md ${
+              <div className={`rounded-xl px-3.5 py-2.5 border text-sm md:text-xs shadow-md ${
                 msg.sender === 'user'
                   ? 'bg-slate-900 border-slate-800 text-slate-200'
                   : 'bg-slate-950/90 border-slate-800/80 text-slate-300'
@@ -235,14 +240,14 @@ export default function XandeChatDemo() {
 
       {/* Menu de Sugestões / Presets */}
       <div className="px-4 py-2 bg-slate-950/60 border-t border-slate-800/40">
-        <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider block mb-1">Escolha uma dúvida de rampa:</span>
+        <span className="text-[10px] md:text-[9px] text-slate-500 font-mono uppercase tracking-wider block mb-1">Escolha uma dúvida de rampa:</span>
         <div className="flex gap-1.5 overflow-x-auto pb-1 no-scrollbar flex-nowrap">
           {PRESETS.map((preset) => (
             <button
               key={preset.id}
               onClick={() => handlePresetClick(preset)}
               disabled={isTyping}
-              className="text-[10px] font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/30 rounded-full px-3 py-1.5 shrink-0 transition-all duration-250 hover:text-emerald-400 disabled:opacity-50"
+              className="text-[11px] md:text-[10px] font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/30 rounded-full px-3 py-1.5 shrink-0 transition-all duration-250 hover:text-emerald-400 disabled:opacity-50"
             >
               {preset.label}
             </button>
@@ -257,7 +262,7 @@ export default function XandeChatDemo() {
           value={customInput}
           onChange={(e) => setCustomInput(e.target.value)}
           placeholder="Tire suas dúvidas (ex: calcular margem do açaí, markup...)"
-          className="flex-1 bg-slate-900 border border-slate-800 focus:border-emerald-500 focus:outline-none rounded-lg px-3 py-2 text-xs text-white"
+          className="flex-1 bg-slate-900 border border-slate-800 focus:border-emerald-500 focus:outline-none rounded-lg px-3 py-2 text-sm md:text-xs text-white"
           disabled={isTyping}
         />
         <button

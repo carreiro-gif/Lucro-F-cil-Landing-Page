@@ -124,7 +124,7 @@ export default function InteractiveCalculator() {
               </span>
               <h3 className="font-display font-bold text-xl text-white">Simulador de Margem</h3>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-sm md:text-xs text-slate-400">
               Faça a simulação em tempo real e descubra a diferença matemática entre precificar no improviso e usar o Markup Inverso.
             </p>
           </div>
@@ -133,11 +133,11 @@ export default function InteractiveCalculator() {
             {/* Custo do prato */}
             <div className="space-y-2">
               <div className="flex justify-between items-center">
-                <label className="text-xs font-semibold text-slate-300">Custo do Insumo (Ficha Técnica)</label>
-                <span className="text-xs font-mono text-emerald-400 font-bold">R$ {cost.toFixed(2)}</span>
+                <label className="text-sm md:text-xs font-semibold text-slate-300">Custo do Insumo (Ficha Técnica)</label>
+                <span className="text-sm md:text-xs font-mono text-emerald-400 font-bold">R$ {cost.toFixed(2)}</span>
               </div>
               
-              <p className="text-[11px] text-slate-400 leading-normal bg-slate-900/60 border border-slate-800 p-2.5 rounded-lg">
+              <p className="text-xs md:text-[11px] text-slate-400 leading-normal bg-slate-900/60 border border-slate-800 p-2.5 rounded-lg">
                 💡 Aqui você deve colocar apenas o custo de produção dos itens usados para preparar o lanche (como pão, carne, queijo e embalagem). Não misture contas fixas aqui, o sistema resolve isso sozinho depois.
               </p>
 
@@ -157,7 +157,7 @@ export default function InteractiveCalculator() {
 
             {/* Canal de Venda */}
             <div>
-              <label className="block text-xs font-semibold text-slate-300 mb-1.5">Canal de Venda Recomendado</label>
+              <label className="block text-sm md:text-xs font-semibold text-slate-300 mb-1.5">Canal de Venda Recomendado</label>
               <select
                 value={selectedChannel}
                 onChange={(e) => setSelectedChannel(e.target.value)}
@@ -174,8 +174,8 @@ export default function InteractiveCalculator() {
             {/* Margem Desejada */}
             <div>
               <div className="flex justify-between items-center mb-1">
-                <label className="text-xs font-semibold text-slate-300">Sua Margem de Lucro Líquida Alvo</label>
-                <span className="text-xs font-mono font-bold text-emerald-400">{targetMargin}% limpo</span>
+                <label className="text-sm md:text-xs font-semibold text-slate-300">Sua Margem de Lucro Líquida Alvo</label>
+                <span className="text-sm md:text-xs font-mono font-bold text-emerald-400">{targetMargin}% limpo</span>
               </div>
               <input
                 type="range"
@@ -185,7 +185,7 @@ export default function InteractiveCalculator() {
                 onChange={(e) => setTargetMargin(parseInt(e.target.value))}
                 className="w-full accent-emerald-500 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-xs md:text-[10px] text-slate-500 font-mono mt-1">
                 <span>10% (Baixa)</span>
                 <span>25% (Padrão Saudável)</span>
                 <span>45% (Alta Rampa)</span>
@@ -196,7 +196,7 @@ export default function InteractiveCalculator() {
             <div className="pt-2 border-t border-slate-800 space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs text-slate-300 font-medium">Antecipar repasse automático</span>
+                  <span className="text-sm md:text-xs text-slate-300 font-medium">Antecipar repasse automático</span>
                   <HelpCircle className="w-3.5 h-3.5 text-slate-500" title="Receber dinheiro em 24h em vez de 30 dias" />
                 </div>
                 <button
@@ -204,11 +204,11 @@ export default function InteractiveCalculator() {
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   {anticipation ? (
-                    <span className="flex items-center text-xs text-emerald-400 gap-1 font-mono">
+                    <span className="flex items-center text-sm md:text-xs text-emerald-400 gap-1 font-mono">
                       Ativo (+{(activeChannel.anticipationFee * 100).toFixed(1)}%) <ToggleRight className="w-7 h-7 text-emerald-400 inline" />
                     </span>
                   ) : (
-                    <span className="flex items-center text-xs text-slate-500 gap-1 font-mono">
+                    <span className="flex items-center text-sm md:text-xs text-slate-500 gap-1 font-mono">
                       Inativo <ToggleLeft className="w-7 h-7 text-slate-600 inline" />
                     </span>
                   )}
@@ -216,7 +216,7 @@ export default function InteractiveCalculator() {
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-300 font-medium">Imposto de Notas (Simples)</span>
+                <span className="text-sm md:text-xs text-slate-300 font-medium">Imposto de Notas (Simples)</span>
                 <div className="flex items-center gap-1">
                   <input
                     type="number"
@@ -247,34 +247,34 @@ export default function InteractiveCalculator() {
                   
                   {/* Card Improviso */}
                   <div className="bg-slate-900/60 border border-red-500/10 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-2 right-2 bg-red-500/10 text-red-400 px-1.5 py-0.5 rounded text-[10px] font-mono flex items-center gap-1">
+                    <div className="absolute top-2 right-2 bg-red-500/10 text-red-400 px-1.5 py-0.5 rounded text-[11px] md:text-[10px] font-mono flex items-center gap-1">
                       <AlertTriangle className="w-3 h-3" /> Chutômetro Comum
                     </div>
                     <div>
-                      <span className="text-xs text-slate-400 block mb-1">Preço Arbitrado</span>
+                      <span className="text-sm md:text-xs text-slate-400 block mb-1">Preço Arbitrado</span>
                       <span className="text-2xl font-mono font-bold text-slate-300">R$ {results.naivePrice.toFixed(2)}</span>
                     </div>
                     
                     <div className="mt-4 pt-3 border-t border-slate-800 space-y-1.5">
-                      <div className="flex justify-between text-xs">
+                      <div className="flex justify-between text-sm md:text-xs">
                         <span className="text-slate-400">Comissões + Impostos:</span>
                         <span className="text-red-400 font-mono">
                           -R$ {((results.naivePrice * activeChannel.commission) + activeChannel.fixedFee + (results.naivePrice * (anticipation ? activeChannel.anticipationFee : 0)) + (results.naivePrice * (taxRate / 100))).toFixed(2)}
                         </span>
                       </div>
-                      <div className="flex justify-between text-xs">
+                      <div className="flex justify-between text-sm md:text-xs">
                         <span className="text-slate-400">Custos Fixos (33% CFI):</span>
                         <span className="text-red-400 font-mono">
                           -R$ {results.cfiMoney.toFixed(2)}
                         </span>
                       </div>
-                      <div className="flex justify-between text-xs font-bold">
+                      <div className="flex justify-between text-sm md:text-xs font-bold">
                         <span className="text-slate-300">Lucro Real que sobra:</span>
                         <span className={`font-mono ${results.naiveProfit <= 0 ? 'text-red-500' : 'text-slate-300'}`}>
                           R$ {results.naiveProfit.toFixed(2)}
                         </span>
                       </div>
-                      <div className="flex justify-between text-[11px] font-mono">
+                      <div className="flex justify-between text-xs md:text-[11px] font-mono">
                         <span className="text-slate-500">Sua margem real:</span>
                         <span className={results.naiveMargin < 12 ? 'text-red-400 font-bold' : 'text-slate-400'}>
                           {results.naiveMargin.toFixed(1)}% {results.naiveMargin < 12 && '(Prejuízo Invisível)'}
@@ -285,34 +285,34 @@ export default function InteractiveCalculator() {
 
                   {/* Card Lucro Fácil */}
                   <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden">
-                    <div className="absolute top-2 right-2 bg-emerald-500/15 text-emerald-400 px-1.5 py-0.5 rounded text-[10px] font-mono flex items-center gap-1">
+                    <div className="absolute top-2 right-2 bg-emerald-500/15 text-emerald-400 px-1.5 py-0.5 rounded text-[11px] md:text-[10px] font-mono flex items-center gap-1">
                       <ShieldCheck className="w-3 h-3" /> Blindagem de Lucro
                     </div>
                     <div>
-                      <span className="text-xs text-emerald-400 block mb-1">Preço no Markup Inverso</span>
+                      <span className="text-sm md:text-xs text-emerald-400 block mb-1">Preço no Markup Inverso</span>
                       <span className="text-2xl font-mono font-bold text-emerald-400">R$ {results.markupInversoPrice.toFixed(2)}</span>
                     </div>
 
                     <div className="mt-4 pt-3 border-t border-slate-800/60 space-y-1.5">
-                      <div className="flex justify-between text-xs">
+                      <div className="flex justify-between text-sm md:text-xs">
                         <span className="text-slate-400">Taxas pagas pelo cliente:</span>
                         <span className="text-slate-300 font-mono">
                           +R$ {results.totalFeesMoney.toFixed(2)}
                         </span>
                       </div>
-                      <div className="flex justify-between text-xs">
+                      <div className="flex justify-between text-sm md:text-xs">
                         <span className="text-slate-400">Custos Fixos (33% CFI):</span>
                         <span className="text-slate-300 font-mono">
                           Coberto (R$ {results.cfiMoney.toFixed(2)})
                         </span>
                       </div>
-                      <div className="flex justify-between text-xs font-bold">
+                      <div className="flex justify-between text-sm md:text-xs font-bold">
                         <span className="text-emerald-400">Lucro Líquido Seguro:</span>
                         <span className="text-emerald-400 font-mono">
                           R$ {results.markupProfit.toFixed(2)}
                         </span>
                       </div>
-                      <div className="flex justify-between text-[11px] font-mono">
+                      <div className="flex justify-between text-xs md:text-[11px] font-mono">
                         <span className="text-slate-400">Sua margem real:</span>
                         <span className="text-emerald-400 font-bold">
                           {results.markupMargin.toFixed(1)}% (Garantido!)
@@ -329,12 +329,12 @@ export default function InteractiveCalculator() {
                     <AlertTriangle className="w-4.5 h-4.5" />
                   </span>
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-1">
+                    <h4 className="text-sm md:text-xs font-bold text-white mb-1">
                       {results.naiveProfit <= 0 
                         ? "Prejuízo Confirmado: Seu preço arbitrado não paga os custos fixos da estrutura!" 
                         : `Atenção: Margem corroída em R$ ${(results.markupProfit - results.naiveProfit).toFixed(2)}`}
                     </h4>
-                    <p className="text-[11px] text-slate-400 leading-relaxed">
+                    <p className="text-xs md:text-[11px] text-slate-400 leading-relaxed">
                       No chutômetro comum de R$ {results.naivePrice.toFixed(2)}, você paga comissões e impostos sobre o valor total do prato do seu próprio bolso, além de não cobrir os 33% de custos fixos (CFI) como aluguel e equipe, resultando em um <strong>prejuízo real de R$ {Math.abs(results.naiveProfit).toFixed(2)}</strong>. Com o <strong className="text-emerald-400">Markup Inverso do Lucro Fácil</strong>, o preço é calculado de forma reversa para que o cliente absorva as taxas e você tire exatamente <strong className="text-emerald-400">R$ {results.markupProfit.toFixed(2)} limpo</strong> (seus {targetMargin}% de lucro garantidos), com os custos fixos (R$ {results.cfiMoney.toFixed(2)}) e insumos 100% pagos.
                     </p>
                   </div>
@@ -343,14 +343,16 @@ export default function InteractiveCalculator() {
                 {/* CTA de Ação no simulador */}
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-slate-800/50">
                   <div className="text-center sm:text-left">
-                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono">Retorno do Investimento</span>
-                    <p className="text-xs text-slate-300">
+                    <span className="text-[11px] md:text-[10px] text-slate-500 uppercase tracking-wider block font-mono">Retorno do Investimento</span>
+                    <p className="text-sm md:text-xs text-slate-300">
                       Corrigindo apenas <strong className="text-white">5 pratos por dia</strong>, você recupera <strong className="text-emerald-400">R$ 450,00/mês</strong>.
                     </p>
                   </div>
                   <a 
-                    href="#pricing"
-                    className="w-full sm:w-auto px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5"
+                    href="https://lucro-facil.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm md:text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5"
                   >
                     Quero Blindar Minhas Margens <ArrowRight className="w-4 h-4" />
                   </a>
@@ -367,8 +369,8 @@ export default function InteractiveCalculator() {
                 <div className="w-12 h-12 rounded-full bg-emerald-500/5 flex items-center justify-center text-emerald-500/40 mb-4 border border-emerald-500/10">
                   <Calculator className="w-6 h-6 animate-pulse" />
                 </div>
-                <h4 className="text-sm font-semibold text-white mb-1">Aguardando o custo do prato</h4>
-                <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+                <h4 className="text-base md:text-sm font-semibold text-white mb-1">Aguardando o custo do prato</h4>
+                <p className="text-sm md:text-xs text-slate-400 max-w-sm leading-relaxed">
                   Digite um valor maior que zero no campo <strong className="text-slate-300">Custo do Insumo</strong> ao lado para ativar a blindagem do Markup Inverso e ver os resultados na hora.
                 </p>
               </motion.div>
