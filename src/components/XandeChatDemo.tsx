@@ -154,7 +154,7 @@ export default function XandeChatDemo() {
           <div className="relative">
             <div className="w-9 h-9 rounded-lg overflow-hidden border border-emerald-500/20 bg-emerald-500/10">
               <img 
-                src="/assets/imagens/xande-avatar.png" 
+                src="/imagens/xande-avatar.png" 
                 alt="Xande IA" 
                 className="w-full h-full object-cover"
               />
@@ -197,7 +197,7 @@ export default function XandeChatDemo() {
                   <User className="w-3.5 h-3.5" />
                 ) : (
                   <img 
-                    src="/assets/imagens/xande-avatar.png" 
+                    src="/imagens/xande-avatar.png" 
                     alt="Xande IA" 
                     className="w-full h-full object-cover rounded-md"
                   />
@@ -218,7 +218,7 @@ export default function XandeChatDemo() {
           <div className="flex items-start gap-2.5">
             <div className="w-7.5 h-7.5 rounded-lg shrink-0 mt-0.5 bg-slate-800 border border-slate-700 overflow-hidden">
               <img 
-                src="/assets/imagens/xande-avatar.png" 
+                src="/imagens/xande-avatar.png" 
                 alt="Xande IA" 
                 className="w-full h-full object-cover rounded-md"
               />

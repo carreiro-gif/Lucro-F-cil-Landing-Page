@@ -323,7 +323,7 @@ export default function App() {
                 <div className="relative group w-full">
                   <div className="absolute -inset-1.5 bg-gradient-to-r from-red-500/10 to-emerald-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                   <img 
-                    src="/assets/imagens/cozinha-real.jpg" 
+                    src="/imagens/cozinha-real.jpg" 
                     alt="Operação de Cozinha Real" 
                     className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[320px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                     referrerPolicy="no-referrer"
@@ -525,7 +525,7 @@ export default function App() {
                 <div className="relative group w-full">
                   <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                   <img 
-                    src="/assets/imagens/hero-sistema.jpg" 
+                    src="/imagens/hero-sistema.jpg" 
                     alt="Entrega de comida no restaurante" 
                     className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[300px] md:h-[380px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                     referrerPolicy="no-referrer"
@@ -697,7 +697,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/assets/imagens/hero-sistema.jpg" 
+                  src="/imagens/hero-sistema.jpg" 
                   alt="Tabela de Copiar e Colar" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
@@ -772,7 +772,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/assets/imagens/hero-sistema.jpg" 
+                  src="/imagens/hero-sistema.jpg" 
                   alt="A Fórmula do Preço Perfeito" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
@@ -821,7 +821,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/assets/imagens/corte-insumo.jpg" 
+                  src="/imagens/corte-insumo.jpg" 
                   alt="Controle Total de CMV" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
@@ -892,7 +892,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/assets/imagens/hero-sistema.jpg" 
+                  src="/imagens/hero-sistema.jpg" 
                   alt="Fluxo de Caixa Integrado" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"

@@ -156,7 +156,7 @@ export default function BuffetSimulator() {
           <div className="relative group w-full h-full">
             <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 pointer-events-none" />
             <img 
-              src="/assets/imagens/buffet-rampa.jpg" 
+              src="/imagens/buffet-rampa.jpg" 
               alt="Imagem das Cubas" 
               className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full h-full object-cover min-h-[160px] filter brightness-90 group-hover:scale-[1.01] transition-all duration-300"
               referrerPolicy="no-referrer"
