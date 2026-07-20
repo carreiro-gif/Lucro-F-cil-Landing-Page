@@ -43,7 +43,7 @@ const FAQS: FAQItem[] = [
     answer: "A conta normal (regra de três) soma as comissões direto ao custo do prato. Só que as plataformas de entrega cobram a porcentagem deles em cima do valor total da venda (preço cheio faturado). O Markup Inverso faz o cálculo de trás para frente, descontando taxas, impostos e margem do preço de venda teórico. Isso garante que o cliente pague as taxas do iFood de forma transparente e o seu lucro líquido permaneça 100% intacto no bolso."
   },
   {
-    question: "Eu tenho restaurante de quilo (self-service). Como o Lucro Fácil ajuda a minha rampa?",
+    question: "Eu tenho restaurante de quilo (self-service). Como o Cardápio Blindado ajuda a minha rampa?",
     answer: "Nós criamos o exclusivo Módulo Buffet por Média de Equilíbrio. Você não precisa cadastrar receita por receita na correria da cozinha. Você divide sua rampa entre pratos leves (saladas), médios (arroz, massas, guarnições) e pesados (carnes, churrasco, proteínas). O sistema calcula a média ponderada do consumo dos clientes, embutindo até mesmo a perda de água (evaporação térmica sob as lâmpadas) e desperdício de cubas para te entregar o preço exato do quilo ideal."
   },
   {
@@ -71,28 +71,28 @@ const MOCK_COPY_DISHES: CopyDishItem[] = [
     shortName: "Smash Burguer",
     name: "Smash Burguer Duplo",
     base: "R$ 28,00",
-    ifoodBasic: "R$ 36,36",
-    ifoodSmart: "R$ 38,89",
-    food99: "R$ 35,90",
-    keeta: "R$ 34,15"
+    ifoodBasic: "R$ 33,02",
+    ifoodSmart: "R$ 38,10",
+    food99: "",
+    keeta: ""
   },
   {
     shortName: "Pizza Calabresa",
     name: "Pizza Calabresa Família",
     base: "R$ 59,00",
-    ifoodBasic: "R$ 76,62",
-    ifoodSmart: "R$ 81,94",
-    food99: "R$ 75,64",
-    keeta: "R$ 71,95"
+    ifoodBasic: "R$ 69,58",
+    ifoodSmart: "R$ 80,27",
+    food99: "",
+    keeta: ""
   },
   {
     shortName: "Combinado Sushi",
     name: "Combinado Sushi Premium",
     base: "R$ 89,00",
-    ifoodBasic: "R$ 115,58",
-    ifoodSmart: "R$ 123,61",
-    food99: "R$ 114,10",
-    keeta: "R$ 108,54"
+    ifoodBasic: "R$ 104,95",
+    ifoodSmart: "R$ 121,09",
+    food99: "",
+    keeta: ""
   }
 ];
 
@@ -143,7 +143,7 @@ export default function App() {
                 <Coins className="w-3 h-3 text-emerald-300 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               </div>
               <div>
-                <span className="font-display font-bold text-lg text-white tracking-tight">Lucro Fácil</span>
+                <span className="font-display font-bold text-lg text-white tracking-tight">Cardápio Blindado</span>
                 <span className="text-[9px] font-mono text-emerald-400 block -mt-1 font-bold tracking-widest">FOOD SERVICE</span>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function App() {
 
           {/* Subheadline persuasiva */}
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            60% dos negócios de comida fecham as portas antes de completar 5 anos porque precificam no puro "chutômetro". O <strong className="text-emerald-400 font-semibold">Lucro Fácil</strong> é o seu consultor financeiro de bolso. Ele calcula o preço certo contra as taxas abusivas, acha os custos escondidos e protege o dinheiro do seu caixa em tempo real.
+            60% dos negócios de comida fecham as portas antes de completar 5 anos porque precificam no puro "chutômetro". Seja pizzaria, hamburgueria, açaiteria, sorveteria, buffet ou restaurante — o <strong className="text-emerald-400 font-semibold">Cardápio Blindado</strong> é o seu consultor financeiro de bolso. Ele calcula o preço certo contra as taxas abusivas, acha os custos escondidos e protege o dinheiro do seu caixa em tempo real.
           </p>
 
           {/* CTAs Principais */}
@@ -250,7 +250,7 @@ export default function App() {
             <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200" />
             <img 
               src="/imagens/hero-sistema.jpg" 
-              alt="Sistema Lucro Fácil Food Service" 
+              alt="Sistema Cardápio Blindado Food Service" 
               className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/90 w-full object-cover max-h-[480px] filter brightness-95 contrast-105 group-hover:scale-[1.005] transition-all duration-300"
               referrerPolicy="no-referrer"
             />
@@ -272,24 +272,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* STATS ROW (NÚMEROS DE RESPEITO) */}
-      <section className="-mt-10 relative z-20 max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center shadow-lg shadow-black/40">
-          <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
-            <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-emerald-400 block animate-pulse">R$ 12 Milhões+</span>
-            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Lucro Recuperado do Delivery</span>
-          </div>
-          <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
-            <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-emerald-400 block">34.2%</span>
-            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Aumento Médio de Margem</span>
-          </div>
-          <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
-            <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-white block">1.800+</span>
-            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block">Restaurantes Protegidos</span>
-          </div>
-          <div className="space-y-1.5 p-4 rounded-xl hover:bg-zinc-900/40 transition-colors">
-            <span className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-cyan-400 block">{"< 1%"}</span>
-            <span className="text-[11px] md:text-[10px] text-slate-400 uppercase tracking-wider font-bold font-mono mt-1 block font-mono">Desperdício Médio de Rampa</span>
+      {/* STATS ROW (DADO DE ALERTA DE MERCADO) */}
+      <section className="-mt-10 relative z-20 max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="bg-zinc-950 border border-red-500/30 rounded-2xl p-6 md:p-8 text-center shadow-xl shadow-red-950/5 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-2 h-full bg-red-500/50" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+            <span className="text-4xl md:text-5xl font-extrabold text-red-500 font-mono tracking-tight shrink-0">
+              60%
+            </span>
+            <div className="text-left max-w-2xl">
+              <span className="text-[11px] md:text-[10px] text-red-400 font-mono uppercase tracking-widest font-bold block mb-1">Estatística Alarmante de Mercado</span>
+              <p className="text-slate-300 text-sm md:text-xs leading-relaxed font-sans">
+                dos negócios de comida fecham as portas antes de completar 5 anos porque precificam no puro chutômetro. <strong className="text-white">Não faça parte dessa estatística.</strong> Proteja suas margens hoje.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +319,7 @@ export default function App() {
                 </div>
                 
                 <h3 className="text-xl md:text-2xl font-display font-extrabold text-white leading-tight">
-                  Vender muito sem o Lucro Fácil é igual a tentar encher um balde furado!
+                  Vender muito sem o Cardápio Blindado é igual a tentar encher um balde furado!
                 </h3>
                 
                 <p className="text-sm md:text-xs text-slate-300 leading-relaxed">
@@ -335,7 +331,7 @@ export default function App() {
                 </p>
                 
                 <p className="text-sm md:text-xs text-slate-400 pt-3 border-t border-zinc-900">
-                  O <strong className="text-emerald-400 font-semibold">Lucro Fácil</strong> não foi feito para você vender mais comida; foi feito para fazer o dinheiro sobrar. Nós tapamos os furos da sua precificação logo na primeira semana para que cada pedido entregue coloque lucro líquido real dentro do seu caixa.
+                  O <strong className="text-emerald-400 font-semibold">Cardápio Blindado</strong> não foi feito para você vender mais comida; foi feito para fazer o dinheiro sobrar. Nós tapamos os furos da sua precificação logo na primeira semana para que cada pedido entregue coloque lucro líquido real dentro do seu caixa.
                 </p>
               </div>
 
@@ -367,9 +363,13 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">O Erro Fatal de Multiplicar por 3</h3>
-                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
-                  Achar que multiplicar o custo do ingrediente por 3 resolve tudo é um tiro no pé. As taxas do delivery (que chegam a 28,2%) e os impostos cobram a comissão em cima do preço cheio do prato, e não do que você gastou. No final, você paga para trabalhar sem perceber.
-                </p>
+                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-1.5">
+                  <p>Achar que simplesmente multiplicar o custo do ingrediente por <strong className="text-white">3</strong> vai garantir o seu lucro é um tiro no pé:</p>
+                  <ul className="list-disc pl-4 space-y-1">
+                    <li>As taxas do delivery (que chegam a <strong className="text-emerald-400">26,5%</strong>) e os impostos cobram a comissão em cima do <strong className="text-white">preço cheio de venda</strong> do prato, e não sobre o que você gastou nos insumos.</li>
+                    <li>Sem calcular essa engrenagem de forma inversa, você acaba pagando taxas abusivas sobre a sua própria margem e tem a ilusão de faturamento enquanto toma prejuízo.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -380,9 +380,13 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">A Taxa Abusiva do Frete</h3>
-                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
-                  Os aplicativos cobram a porcentagem de comissão deles em cima do valor total bruto da conta, incluindo o frete que o próprio cliente pagou. Sem o cálculo de Markup Inverso do Lucro Fácil, essa comissão sai direto do seu lucro líquido.
-                </p>
+                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-1.5">
+                  <p>Os aplicativos cobram a comissão deles sobre o <strong className="text-white">valor total bruto da conta</strong>:</p>
+                  <ul className="list-disc pl-4 space-y-1">
+                    <li>A mordida inclui até o valor do <strong className="text-white">frete de entrega</strong> pago pelo cliente final.</li>
+                    <li>Se você não usar o cálculo de <strong className="text-emerald-400">Markup Inverso</strong>, essa comissão inesperada é descontada diretamente do seu lucro líquido, esvaziando o seu caixa.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -393,12 +397,17 @@ export default function App() {
               </span>
               <div>
                 <h3 className="font-bold text-white text-base mb-1.5">O Encolhimento Fantasma: Você está dando comida de graça para o cliente?</h3>
-                <p className="text-sm md:text-xs text-slate-400 leading-relaxed mb-2">
-                  Quando você compra 10kg de filé de frango ou carne bovina no fornecedor, você paga pelo peso bruto. Mas quando a sua equipe limpa a peça na cozinha, joga fora gordura, osso e nervo. O frango perde peso na limpeza. Depois, quando vai para a chapa ou para o forno, perde água e encolhe ainda mais.
-                </p>
-                <p className="text-sm md:text-xs text-slate-400 leading-relaxed">
-                  Se você monta a sua ficha técnica pesando o ingrediente cru direto da embalagem, a sua conta está errada. O nome disso na gastronomia é <strong className="text-white">Fator de Correção e Índice de Cocção</strong>. No papel ou no Excel, fazer essa conta é uma tortura. No <strong className="text-emerald-400">Lucro Fácil</strong>, você só digita quanto comprou e quanto sobrou após o preparo. O sistema calcula o encolhimento invisível sozinho e ajusta o preço em tempo real.
-                </p>
+                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-2.5">
+                  <p>Comprar <strong className="text-white">10kg</strong> de filé de frango ou carne no fornecedor não significa vender os mesmos <strong className="text-white">10kg</strong> para o cliente:</p>
+                  <ul className="list-disc pl-4 space-y-1">
+                    <li><strong className="text-white">Perda na Limpeza:</strong> Ao limpar a peça na cozinha, sua equipe joga fora gordura, ossos e nervos, gerando até <strong className="text-red-400">15% a 25% de desperdício bruto</strong>.</li>
+                    <li><strong className="text-white">Perda na Cocção:</strong> Ao grelhar ou assar, o alimento perde água e encolhe ainda mais antes de ir para a embalagem.</li>
+                    <li><strong className="text-white">O Erro Fatal:</strong> Se a sua ficha técnica usa o peso do ingrediente cru direto da embalagem, você está pagando o desperdício do seu próprio bolso.</li>
+                  </ul>
+                  <p>
+                    No <strong className="text-emerald-400">Cardápio Blindado</strong>, você só digita quanto comprou e quanto sobrou após a limpeza e preparo. O sistema calcula o <strong className="text-white">Fator de Correção</strong> automaticamente e ajusta os custos e preços em tempo real.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -412,18 +421,17 @@ export default function App() {
                 <h3 className="font-bold text-white text-base mb-1.5 leading-tight">
                   Conheça o CFI: A engrenagem que calcula os custos fixos e protege o lucro do seu cardápio!
                 </h3>
-                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-2.5">
+                <div className="text-sm md:text-xs text-slate-400 leading-relaxed space-y-3">
                   <p>
-                    Você já parou para pensar que o custo real de um prato não é só o arroz, o feijão e a carne? Se o seu restaurante tem aluguel, luz, água, contador, imposto e funcionários para pagar, cada porção de comida que sai da sua cozinha precisa carregar uma "fatiazinha" dessas despesas globais.
+                    O custo real de um prato não se resume aos ingredientes. Se a sua empresa tem despesas como aluguel, água, energia, impostos e funcionários, cada pedido precisa cobrir uma parcela dessa conta:
                   </p>
-                  <p>
-                    Se você não dilui esses gastos do jeito certo na hora de dar o preço, você pode vender mil pratos no mês, ter a cozinha lotada e, mesmo assim, faltar dinheiro para pagar os boletos no final do mês.
-                  </p>
-                  <p>
-                    Para resolver esse buraco financeiro, nós criamos a tecnologia de <strong className="text-emerald-400 font-semibold">CFI (Custos Fixos Integrados)</strong>. Você lança as suas despesas mensais em uma tela simples e o nosso motor matemático faz a mágica sozinho: ele distribui o peso dos seus custos fixos milimetricamente dentro do preço sugerido de cada item do cardápio.
-                  </p>
+                  <ul className="list-disc pl-4 space-y-1.5">
+                    <li><strong className="text-white">O Risco Invisível:</strong> Sem ratear esses custos de forma precisa, você pode vender <strong className="text-white">1.000+ pedidos por mês</strong>, manter o salão lotado e ainda fechar no vermelho.</li>
+                    <li><strong className="text-white">Rateio Inteligente:</strong> O <strong className="text-emerald-400">CFI (Custos Fixos Integrados)</strong> distribui o peso das suas despesas mensais milimetricamente dentro do preço sugerido de cada item.</li>
+                    <li><strong className="text-white">Preço Blindado:</strong> Você precifica sabendo que cada prato vendido cobre o insumo, as taxas e uma fatia exata dos seus custos operacionais de rampa.</li>
+                  </ul>
                   <p className="text-slate-300">
-                    Quando você bota o preço na sua loja física, no balcão ou no salão, você tem a certeza absoluta de que aquele valor cobre o ingrediente, a taxa, o imposto e ainda paga o aluguel da casa! É o controle total da sua rampa, sem planilhas chatas e sem adivinhação.
+                    Tenha certeza absoluta de que o valor cobrado paga os ingredientes, as taxas dos apps e ainda quita o aluguel da sua casa! Gestão descomplicada, sem planilhas mortas e sem adivinhação.
                   </p>
                 </div>
               </div>
@@ -494,11 +502,11 @@ export default function App() {
               <div className="lg:col-span-12 space-y-6">
                 <div className="space-y-3">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-500/10 text-red-400 text-xs font-bold rounded-lg border border-red-500/20 font-mono uppercase tracking-wider">
-                    <AlertTriangle className="w-4 h-4 text-red-400" /> Alerta Oficial
+                    <AlertTriangle className="w-4 h-4 text-red-400" /> Alerta de Mercado
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-tight">
-                    Até o próprio iFood já assumiu publicamente: <br />
-                    <span className="text-emerald-400 font-extrabold font-display">você está calculando seu preço errado!</span>
+                    Nem o mercado de delivery esconde mais isso: <br />
+                    <span className="text-emerald-400 font-extrabold font-display">calcular o preço errado é a porta de entrada para o prejuízo.</span>
                   </h3>
                   <p className="text-xs text-slate-400 leading-relaxed">
                     Não é conversa de consultor. É um fato de sobrevivência na cozinha do delivery.
@@ -507,26 +515,17 @@ export default function App() {
 
                 <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                   <p>
-                    Não é conversa fiada de consultor. O próprio blog oficial do iFood mantém uma calculadora de preços porque eles cansaram de ver restaurantes fechando as portas por pura falta de lucro. Eles deixam claro em letras garrafais: <strong className="text-white">somar a taxa do aplicativo direto no preço do custo do prato está errado e vai quebrar o seu negócio</strong>.
+                    Ferramentas gratuitas de cálculo de preço já existem no mercado — inclusive dentro do próprio ecossistema de delivery — porque esse é um problema conhecido e recorrente entre restaurantes. Somar a taxa do aplicativo direto no preço de custo do prato, sem o cálculo correto, é um erro grave:
                   </p>
                   
-                  <p>
-                    Como o aplicativo morde a comissão em cima do valor total da conta (incluindo o frete e os cupons que o cliente usou), uma bobeira de cálculo em um prato que você vende por R$ 50,00 faz você perder <strong className="text-white">R$ 3,43 por pedido</strong> sem perceber.
-                  </p>
-
-                  <p>
-                    Se você faz 500 pedidos no mês, são <strong className="text-emerald-400">R$ 1.715,00 jogados no lixo todo santo mês</strong>. Esse dinheiro sai direto do lucro que deveria ir para o seu bolso, para pagar o aluguel da sua casa ou para trocar de carro.
-                  </p>
-
-                  <div className="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-4 space-y-2">
-                    <span className="text-xs font-bold font-mono text-emerald-400 uppercase tracking-widest block">O Gargalo da Ferramenta Gratuita:</span>
-                    <p className="text-sm md:text-xs text-slate-400 leading-relaxed italic">
-                      "Mas a calculadora gratuita do iFood tem um problema crônico: ela é burra. Ela não salva seus dados, você tem que preencher tudo na mão toda vez, dá um trabalho danado e só serve para o iFood."
-                    </p>
-                  </div>
+                  <ul className="list-disc pl-4 space-y-2">
+                    <li><strong className="text-white">A Mordida Silenciosa:</strong> Como o aplicativo cobra comissão sobre o valor total da conta (incluindo o frete e os cupons de desconto), um erro de centavos em um prato de <strong className="text-white">R$ 50,00</strong> faz você perder <strong className="text-red-400">R$ 3,43 por pedido</strong> sem perceber.</li>
+                    <li><strong className="text-white">O Prejuízo Acumulado:</strong> Se a sua rampa faz <strong className="text-white">500 pedidos no mês</strong>, são <strong className="text-red-400">R$ 1.715,00 jogados no lixo todo santo mês</strong> diretamente do seu lucro líquido.</li>
+                    <li><strong className="text-white">O Gargalo das Ferramentas Gratuitas:</strong> Elas são extremamente limitadas. Não salvam seus dados, exigem que você digite tudo do zero todas as vezes e só calculam para um canal de venda de cada vez.</li>
+                  </ul>
 
                   <p className="text-sm md:text-xs text-slate-400">
-                    É por isso que nós criamos o <strong className="text-emerald-400">Lucro Fácil</strong>. Nós pegamos essa mesma lógica matemática rigorosa e automatizamos tudo. Você joga seus ingredientes uma vez só e o sistema calcula a blindagem em milissegundos não só para o iFood, mas também para a 99Food e para a Keeta. Tudo salvo, seguro e atualizado em cascata.
+                    É por isso que nós criamos o <strong className="text-emerald-400">Cardápio Blindado</strong>: pegamos essa mesma lógica matemática rigorosa e automatizamos tudo em cascata. Você cadastra os ingredientes uma vez só e o sistema blinda sua margem de lucro para <strong className="text-white">iFood, 99Food e Keeta</strong> de forma simultânea e 100% segura.
                   </p>
                 </div>
 
@@ -535,8 +534,8 @@ export default function App() {
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-white block">Fonte Oficial</span>
-                    <span className="text-[11px] md:text-[10px] text-slate-500 block">Portal do Parceiro iFood</span>
+                    <span className="text-xs font-bold text-white block">Fonte</span>
+                    <span className="text-[11px] md:text-[10px] text-slate-500 block">Boas práticas do mercado de delivery</span>
                   </div>
                 </div>
               </div>
@@ -565,7 +564,7 @@ export default function App() {
 
               <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
-                  Chega de passar o dia inteiro quebrando a cabeça com contas diferentes para cada aplicativo de entrega. No Lucro Fácil, nós criamos a ferramenta mais simples e poderosa do mercado: a Tabela de Copiar e Colar.
+                  Chega de passar o dia inteiro quebrando a cabeça com contas diferentes para cada aplicativo de entrega. No Cardápio Blindado, nós criamos a ferramenta mais simples e poderosa do mercado: a Tabela de Copiar e Colar.
                 </p>
                 <p>
                   Funciona assim: você seleciona o prato e o sistema te dá, em uma única linha na tela, o preço exato que você deve cobrar em cada lugar:
@@ -615,12 +614,12 @@ export default function App() {
                     </div>
 
                     {/* Linha 2: iFood Básico */}
-                    <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors gap-2">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🛵</span>
-                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Plano Básico):</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood Plano Básico (entrega própria - 15,2%):</span>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 self-end sm:self-auto">
                         <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodBasic}</span>
                         <button
                           type="button"
@@ -632,13 +631,13 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Linha 3: iFood Campanha Inteligente */}
-                    <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
+                    {/* Linha 3: iFood Plano Entrega */}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors gap-2">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🚀</span>
-                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood (Com Campanha Inteligente):</span>
+                        <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar no iFood Plano Entrega (iFood entrega - 26,5%):</span>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 self-end sm:self-auto">
                         <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].ifoodSmart}</span>
                         <button
                           type="button"
@@ -651,45 +650,35 @@ export default function App() {
                     </div>
 
                     {/* Linha 4: 99Food */}
-                    <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors gap-2">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🔴</span>
                         <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar na 99Food:</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].food99}</span>
-                        <button
-                          type="button"
-                          onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].food99, `99food-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
-                        >
-                          {copiedField === `99food-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
-                        </button>
+                      <div className="text-right max-w-xs sm:max-w-md">
+                        <span className="text-xs text-slate-400 leading-normal block">
+                          taxas que variam conforme plano e promoções vigentes — confira o valor atualizado no simulador
+                        </span>
                       </div>
                     </div>
 
                     {/* Linha 5: Keeta */}
-                    <div className="flex items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-2 rounded-xl bg-zinc-950/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors gap-2">
                       <div className="flex items-center gap-2">
                         <span className="text-xs">🔵</span>
                         <span className="text-sm md:text-xs font-semibold text-slate-300">Quanto cobrar na Keeta:</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm md:text-xs font-bold text-white font-mono">{MOCK_COPY_DISHES[selectedDishIndex].keeta}</span>
-                        <button
-                          type="button"
-                          onClick={() => handleCopyText(MOCK_COPY_DISHES[selectedDishIndex].keeta, `keeta-${selectedDishIndex}`)}
-                          className="px-2.5 py-1 text-[11px] md:text-[10px] bg-zinc-900 hover:bg-zinc-800 text-slate-300 border border-zinc-800 rounded hover:border-emerald-500/40 font-semibold cursor-pointer transition-all"
-                        >
-                          {copiedField === `keeta-${selectedDishIndex}` ? 'Copiado! ✓' : 'Copiar 📋'}
-                        </button>
+                      <div className="text-right max-w-xs sm:max-w-md">
+                        <span className="text-xs text-slate-400 leading-normal block">
+                          taxas que variam conforme plano e promoções vigentes — confira o valor atualizado no simulador
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <p>
-                  O motor matemático do Lucro Fácil faz todo o cálculo reverso em milissegundos. Tudo o que você precisa fazer é olhar para a tela, copiar o preço sugerido e colar dentro do seu aplicativo.
+                  O motor matemático do Cardápio Blindado faz todo o cálculo reverso em milissegundos. Tudo o que você precisa fazer é olhar para a tela, copiar o preço sugerido e colar dentro do seu aplicativo.
                 </p>
                 <p>
                   Pronto! Você tem a garantia matemática de que vai colocar no seu bolso o mesmíssimo lucro líquido, não importa se o cliente comprou sentado na mesa do seu salão ou pelo delivery da Keeta. O aplicativo não morde mais nem um centavo do seu suor.
@@ -735,7 +724,7 @@ export default function App() {
 
               <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
-                  Para o seu restaurante sobrar dinheiro de verdade no fim do mês, o preço de venda na sua loja não pode ser inventado. Ele precisa seguir uma regra rígida baseada em 3 pilares que o Lucro Fácil controla para você:
+                  Para o seu restaurante sobrar dinheiro de verdade no fim do mês, o preço de venda na sua loja não pode ser inventado. Ele precisa seguir uma regra rígida baseada em 3 pilares que o Cardápio Blindado controla para você:
                 </p>
                 
                 <ul className="space-y-3.5 pl-1 text-sm md:text-xs">
@@ -810,7 +799,7 @@ export default function App() {
 
               <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
-                  O Lucro Fácil tem uma área inteira focada exclusivamente no controle do seu CMV. Chega de ver o dinheiro sumir pelo ralo do desperdício!
+                  O Cardápio Blindado tem uma área inteira focada exclusivamente no controle do seu CMV. Chega de ver o dinheiro sumir pelo ralo do desperdício!
                 </p>
                 <p>
                   Nessa tela simples, você cadastra todos os seus insumos brutos, monta sub-receitas (como o custo exato do seu molho artesanal ou do blend do seu hambúrguer) e adiciona o valor das embalagens, sacolas e guardanapos.
@@ -859,35 +848,35 @@ export default function App() {
 
               <div className="space-y-4 text-sm md:text-xs leading-relaxed text-slate-300">
                 <p>
-                  O Lucro Fácil é um ecossistema financeiro completo e feito para quem não tempo a perder. Chega de abrir dez planilhas para saber se tem conta vencendo!
+                  O <strong className="text-emerald-400">Cardápio Blindado</strong> é um ecossistema financeiro completo feito sob medida para quem não tem tempo a perder. Chega de abrir <strong className="text-white">10 planilhas diferentes</strong> para descobrir se há boletos vencendo hoje:
                 </p>
                 <p>
-                  O sistema funciona todo dividido em abas separadas e limpas, totalmente integradas com o seu CFI:
+                  Sua gestão é organizada em <strong className="text-white">abas dedicadas, integradas e extremamente visuais</strong> conectadas diretamente ao seu cálculo de CFI:
                 </p>
                 
                 <ul className="space-y-3.5 pl-1 text-sm md:text-xs">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-mono font-bold">📁</span>
                     <span>
-                      <strong className="text-white">Aba de Contas a Pagar:</strong> Cadastre seus boletos de fornecedores, parcelas e despesas para nunca mais pagar juros na vida.
+                      <strong className="text-white">Aba de Contas a Pagar:</strong> Lance boletos de insumos, parcelas de equipamentos ou despesas com <strong className="text-white">0% de complicação</strong> para evitar juros e multas de atraso.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-mono font-bold">📁</span>
                     <span>
-                      <strong className="text-white">Aba de Contas a Receber:</strong> Acompanhe o dinheiro que vai entrar dos cartões e dos repasses dos aplicativos.
+                      <strong className="text-white">Aba de Contas a Receber:</strong> Monitore as datas de liberação dos repasses de cartão e dos aplicativos para blindar o seu capital de giro.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-mono font-bold">📁</span>
                     <span>
-                      <strong className="text-white">Aba de Fluxo de Caixa:</strong> Veja o saldo real da sua empresa e saiba exatamente para onde cada centavo está indo.
+                      <strong className="text-white">Aba de Fluxo de Caixa:</strong> Acompanhe as entradas e saídas em tempo real e saiba com precisão para onde está indo cada <strong className="text-emerald-400">R$ 1,00</strong> faturado.
                     </span>
                   </li>
                 </ul>
 
                 <p>
-                  Tudo funciona de forma inteligente. Quando você lança uma conta na aba financeira, o sistema já atualiza o cálculo do seu CFI de rampa automaticamente. É a gestão total do seu restaurante organizada de um jeito que até uma criança consegue mexer.
+                  Quando você lança ou altera qualquer pagamento no financeiro, o sistema <strong className="text-emerald-400">atualiza o seu CFI em tempo real</strong>. Sem redigitar dados, sem planilhas mortas e com controle absoluto das suas margens de lucro.
                 </p>
               </div>
             </div>
@@ -923,7 +912,7 @@ export default function App() {
               O Playground do Preço Perfeito
             </h2>
             <p className="text-slate-400 text-base md:text-sm max-w-2xl mx-auto leading-relaxed">
-              Explore o ecossistema vivo do Lucro Fácil. Monte combos, ajuste custos e comissões, e veja como protegemos sua margem em tempo real.
+              Explore o ecossistema vivo do Cardápio Blindado. Monte combos, ajuste custos e comissões, e veja como protegemos sua margem em tempo real.
             </p>
           </div>
           <PrecoPerfeitoPlayground />
@@ -937,10 +926,10 @@ export default function App() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-sm md:text-xs text-emerald-400 font-bold uppercase tracking-widest font-mono block mb-2">PLAYGROUND INTERATIVO</span>
             <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white">
-              Veja a diferença matemática entre o Improviso e a Blindagem do Lucro Fácil
+              Veja a diferença matemática entre o Improviso e a Blindagem do Cardápio Blindado
             </h2>
             <p className="text-slate-400 text-base md:text-sm mt-3 max-w-2xl mx-auto leading-relaxed">
-              Clique nas abas abaixo para interagir com o motor matemático do Lucro Fácil e entender como protegemos cada centavo da sua operação de alimentação.
+              Clique nas abas abaixo para interagir com o motor matemático do Cardápio Blindado e entender como protegemos cada centavo da sua operação de alimentação.
             </p>
           </div>
 
@@ -1370,17 +1359,17 @@ export default function App() {
             <Lock className="w-6 h-6 text-emerald-400" />
           </span>
           <h3 className="font-display font-extrabold text-2xl md:text-3xl text-white">
-            O Lucro Fácil é de graça se você fizer a matemática básica da cozinha!
+            O Cardápio Blindado é de graça se você fizer a matemática básica da cozinha!
           </h3>
           <div className="text-sm md:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed space-y-4">
             <p>
-              Não pense no Lucro Fácil como mais uma despesa mensal. Ele é o único funcionário que trabalha 24 horas por dia para colocar dinheiro de verdade na sua conta.
+              Não pense no Cardápio Blindado como mais uma despesa mensal. Ele é o único funcionário que trabalha 24 horas por dia para colocar dinheiro de verdade na sua conta.
             </p>
             <p>
               Se o sistema te ajudar a identificar que o Fator de Correção do frango estava errado em apenas R$ 1,00 por quilo, ou que você estava deixando vazar R$ 2,00 em taxas não calculadas em cada pedido do iFood...
             </p>
             <p>
-              Se você fizer apenas <strong className="text-white">15 pedidos de delivery por dia</strong> no mês inteiro, o Lucro Fácil já salvou <strong className="text-emerald-400">R$ 900,00 que iriam direto para o ralo</strong>. Isso paga o plano anual do sistema inteiro e ainda sobra dinheiro para você investir na sua rampa!
+              Se você fizer apenas <strong className="text-white">15 pedidos de delivery por dia</strong> no mês inteiro, o Cardápio Blindado já salvou <strong className="text-emerald-400">R$ 900,00 que iriam direto para o ralo</strong>. Isso paga o plano anual do sistema inteiro e ainda sobra dinheiro para você investir na sua rampa!
             </p>
             <p className="text-[11px] md:text-[10px] text-slate-400 pt-4">
               É por isso que nós não cobramos taxa de cancelamento e nem exigimos fidelidade de contrato. Nós temos tanta certeza do valor que vamos gerar para o seu restaurante que se você não ver o seu lucro crescer na primeira semana, você pode cancelar com um único clique.
@@ -1406,7 +1395,7 @@ export default function App() {
             {/* Depoimento 1 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
               <p className="text-sm md:text-xs text-slate-300 leading-relaxed italic">
-                "Eu vendia quase R$ 45 mil por mês no iFood e vivia com a conta zerada. Achava que o problema era o aplicativo, mas quando usei a calculadora do Lucro Fácil, vi que estava errando o preço do meu combo por R$ 6,00 de diferença! Ajustei o preço pelo Markup Inverso e, já no primeiro mês, sobraram R$ 4.200 líquidos a mais na minha conta."
+                "Eu vendia quase R$ 45 mil por mês no iFood e vivia com a conta zerada. Achava que o problema era o aplicativo, mas quando usei a calculadora do Cardápio Blindado, vi que estava errando o preço do meu combo por R$ 6,00 de diferença! Ajustei o preço pelo Markup Inverso e, já no primeiro mês, sobraram R$ 4.200 líquidos a mais na minha conta."
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-zinc-900 pt-4">
                 <div className="w-9 h-9 bg-zinc-900 rounded-full flex items-center justify-center font-bold text-xs text-emerald-400 border border-zinc-800">
@@ -1463,7 +1452,7 @@ export default function App() {
           <div className="text-center mb-16">
             <span className="text-xs text-emerald-400 font-extrabold uppercase tracking-widest font-mono block mb-2">FAQ DE CONFIANÇA</span>
             <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white">
-              Tudo o que você precisa saber sobre o Lucro Fácil
+              Tudo o que você precisa saber sobre o Cardápio Blindado
             </h2>
           </div>
 
@@ -1538,10 +1527,10 @@ export default function App() {
               <Shield className="w-5 h-5 text-emerald-400" />
               <Coins className="w-3 h-3 text-emerald-300 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <span className="font-display font-bold text-white">Lucro Fácil</span>
+            <span className="font-display font-bold text-white">Cardápio Blindado</span>
           </div>
           <p className="text-center md:text-right text-[12px] md:text-[11px] leading-relaxed">
-            Lucro Fácil &copy; 2026 Lucro Fácil SaaS Ltda. Todos os direitos reservados. <br />
+            Cardápio Blindado &copy; 2026. Todos os direitos reservados. <br />
             A plataforma definitiva de engenharia de cardápio e precificação inteligente que blinda as margens e garante lucro real no caixa.
           </p>
         </div>

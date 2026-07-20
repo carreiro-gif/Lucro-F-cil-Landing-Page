@@ -1,6 +1,6 @@
 {
-  "name": "Lucro Fácil",
-  "description": "Landing Page oficial do SaaS de Food Service Lucro Fácil",
+  "name": "Cardápio Blindado",
+  "description": "Landing Page oficial do SaaS de Food Service Cardápio Blindado",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

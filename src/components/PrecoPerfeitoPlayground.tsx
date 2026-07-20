@@ -107,7 +107,7 @@ export default function PrecoPerfeitoPlayground() {
 
             <div className="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
               <p>
-                Dar desconto de qualquer jeito em aplicativo de entrega é o caminho mais rápido para quebrar as pernas do seu caixa. No Lucro Fácil, a aba de Combos foi desenhada para você criar ofertas altamente lucrativas sem nenhum achismo.
+                Dar desconto de qualquer jeito em aplicativo de entrega é o caminho mais rápido para quebrar as pernas do seu caixa. No Cardápio Blindado, a aba de Combos foi desenhada para você criar ofertas altamente lucrativas sem nenhum achismo.
               </p>
               <p>
                 Aqui, nós usamos a inteligência das <strong className="text-white">4 Listas do Cardápio</strong> para cruzar seus produtos de forma estratégica usando o seu CFI (Custos Fixos Integrados):
@@ -185,13 +185,13 @@ export default function PrecoPerfeitoPlayground() {
               </div>
 
               <div className="flex gap-2">
-                <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center">
-                  <span className="text-[10px] md:text-[9px] text-slate-500 font-mono block">iFood Tradicional</span>
-                  <span className="text-sm md:text-xs text-white font-bold font-mono">R$ 42,32</span>
+                <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center flex flex-col justify-center">
+                  <span className="text-[10px] md:text-[9px] text-slate-500 font-mono block">iFood (Plano Entrega)</span>
+                  <span className="text-sm md:text-xs text-white font-bold font-mono">R$ 41,17</span>
                 </div>
-                <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center">
+                <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-lg p-2 text-center flex flex-col justify-center">
                   <span className="text-[10px] md:text-[9px] text-slate-500 font-mono block">Keeta Delivery</span>
-                  <span className="text-sm md:text-xs text-white font-bold font-mono">R$ 40,35</span>
+                  <span className="text-[11px] md:text-[10px] text-slate-400 font-sans leading-tight block mt-0.5">Taxa variável (confira no simulador)</span>
                 </div>
               </div>
             </div>
@@ -396,13 +396,13 @@ export default function PrecoPerfeitoPlayground() {
                       </td>
                     </tr>
 
-                    {/* Canal 2: iFood Tradicional */}
+                    {/* Canal 2: iFood (Plano Entrega) */}
                     <tr className="border-b border-zinc-900 hover:bg-zinc-900/10 transition-colors">
                       <td className="p-3 font-semibold text-white">
-                        <span className="mr-1.5">🛵</span> iFood Tradicional
+                        <span className="mr-1.5">🛵</span> iFood (Plano Entrega)
                       </td>
-                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
-                        Markup Inverso aplicando as taxas de {(results.ifoodRate * 100).toFixed(1)}% + taxa de antecipação
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-sans">
+                        Markup Inverso aplicando as taxas de 26,5% (Plano Entrega)
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.ifoodTradicionalPrice.toFixed(2)}
@@ -451,8 +451,8 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🔴</span> 99Food
                       </td>
-                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
-                        Motor calcula a taxa de comissão de {(results.food99Rate * 100).toFixed(1)}% da plataforma
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-sans leading-normal">
+                        taxas que variam conforme plano e promoções vigentes — confira o valor atualizado no simulador
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.food99Price.toFixed(2)}
@@ -476,8 +476,8 @@ export default function PrecoPerfeitoPlayground() {
                       <td className="p-3 font-semibold text-white">
                         <span className="mr-1.5">🔵</span> Keeta
                       </td>
-                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-mono">
-                        Inversão milimétrica com taxas de {(results.keetaRate * 100).toFixed(1)}% da Keeta
+                      <td className="p-3 text-slate-400 text-sm md:text-xs hidden md:table-cell font-sans leading-normal">
+                        taxas que variam conforme plano e promoções vigentes — confira o valor atualizado no simulador
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-white text-sm sm:text-base">
                         R$ {results.keetaPrice.toFixed(2)}
@@ -505,9 +505,9 @@ export default function PrecoPerfeitoPlayground() {
                   <ShieldCheck className="w-5 h-5" />
                 </span>
                 <div className="space-y-1">
-                  <h4 className="text-sm md:text-xs font-bold text-white">Blindagem Ativa: O Markup Inverso do Lucro Fácil em Ação</h4>
+                  <h4 className="text-sm md:text-xs font-bold text-white">Blindagem Ativa: O Markup Inverso do Cardápio Blindado em Ação</h4>
                   <p className="text-xs md:text-[11px] text-slate-400 leading-relaxed">
-                    Você reparou que nos aplicativos o preço sobe? Isso ocorre porque o <strong className="text-emerald-400">Lucro Fácil</strong> joga todas as taxas e descontos nos ombros dos aplicativos e dos clientes finais. Você recebe limpo exatamente os <strong className="text-white">R$ {results.lojaPrice.toFixed(2)}</strong> necessários para pagar seus ingredientes (CMV), sua estrutura física (CFI 33%) e guardar seus <strong className="text-emerald-400">{targetMargin}% de lucro no bolso</strong>.
+                    Você reparou que nos aplicativos o preço sobe? Isso ocorre porque o <strong className="text-emerald-400">Cardápio Blindado</strong> joga todas as taxas e descontos nos ombros dos aplicativos e dos clientes finais. Você recebe limpo exatamente os <strong className="text-white">R$ {results.lojaPrice.toFixed(2)}</strong> necessários para pagar seus ingredientes (CMV), sua estrutura física (CFI 33%) e guardar seus <strong className="text-emerald-400">{targetMargin}% de lucro no bolso</strong>.
                   </p>
                 </div>
               </div>
@@ -528,10 +528,10 @@ export default function PrecoPerfeitoPlayground() {
               🔄 Tudo Conectado
             </span>
             <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-tight">
-              Esqueça o trabalho manual. O Lucro Fácil trabalha por você em tempo real!
+              Esqueça o trabalho manual. O Cardápio Blindado trabalha por você em tempo real!
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              O maior trunfo do Lucro Fácil é que tudo é interligado. Esse quadro que você acabou de simular fica salvo no sistema para todos os seus pratos e combos.
+              O maior trunfo do Cardápio Blindado é que tudo é interligado. Esse quadro que você acabou de simular fica salvo no sistema para todos os seus pratos e combos.
             </p>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Sabe o que acontece se o preço do pão, da carne ou do óleo subir no fornecedor? Você não precisa refazer nenhuma conta e nem abrir o simulador de novo. Você entra na aba de Insumos, altera o valor do ingrediente para o preço novo e <strong className="text-emerald-400 font-bold">BUM!</strong>

@@ -29,10 +29,10 @@ const PRESETS: PresetMessage[] = [
     question: 'Meu CMV fechou em 38.5% este mês. Como reduzo isso na prática?',
     answer: [
       '**Xande IA:** 38.5% de CMV Geral está na zona vermelha de perigo para o modelo de rampa. Vamos fazer uma auditoria imediata de cozinha sem estressar sua operação:',
-      '• **Audite o Fator de Correção:** Carne bovina perde peso limpando e cozinhando. Se você compra por R$ 35,00/kg e limpa 20% de aparas, seu custo real limpo é R$ 43,75/kg. Cadastre o fator de correção 1.25 no Lucro Fácil de imediato.',
+      '• **Audite o Fator de Correção:** Carne bovina perde peso limpando e cozinhando. Se você compra por R$ 35,00/kg e limpa 20% de aparas, seu custo real limpo é R$ 43,75/kg. Cadastre o fator de correção 1.25 no Cardápio Blindado de imediato.',
       '• **Identifique "Ladrões de Caixa":** Suas guarnições (arroz, batata, molho) costumam ser colocadas sem pesagem na rampa. Cada colher extra de maionese caseira por hambúrguer pode sugar R$ 1.500 no final do mês!',
       '• **Cascade de Fornecedor:** Abra a tela de Insumos, mude o preço do quilo do óleo e veja quais pratos sofreram em cascata. Substitua ou renegocie com o fornecedor.',
-      'Foque em baixar 1% por semana aplicando porções padronizadas. No Lucro Fácil, cada ficha técnica te avisa onde está o excesso!'
+      'Foque em baixar 1% por semana aplicando porções padronizadas. No Cardápio Blindado, cada ficha técnica te avisa onde está o excesso!'
     ]
   },
   {
@@ -44,7 +44,7 @@ const PRESETS: PresetMessage[] = [
       'Vamos usar a fórmula do **Fator de Correção (FC)**:',
       '• **FC = Peso Bruto / Peso Líquido**',
       '• Se o seu hambúrguer bruto pesa 150g antes de ir para a chapa e sai de lá com 117g devido ao encolhimento de gordura e água, seu FC é de **150 / 117 = 1.28**.',
-      '• Na hora de cadastrar sua Ficha Técnica no Lucro Fácil, você coloca 117g de peso líquido e o FC de 1.28. O sistema automaticamente calcula o custo real de compra de 150g por prato.',
+      '• Na hora de cadastrar sua Ficha Técnica no Cardápio Blindado, você coloca 117g de peso líquido e o FC de 1.28. O sistema automaticamente calcula o custo real de compra de 150g por prato.',
       'Sem isso, você estaria precificando com base em 117g e pagando o custo do encolhimento do seu próprio caixa.'
     ]
   },
@@ -56,10 +56,10 @@ const PRESETS: PresetMessage[] = [
       '**Xande IA:** Perigo máximo aqui! Esse é o erro mais caro do delivery moderno.',
       'Quando você entra em campanhas como "iFood Hits" ou oferece cupons automáticos, a comissão do iFood (ex: 23%) incide sobre o **preço original** do prato antes do desconto, ou o desconto é dividido.',
       'Para evitar bitributação e prejuízo:',
-      '• No Lucro Fácil, habilite o toggle de "iFood Hits" na aba de canais de venda.',
+      '• No Cardápio Blindado, habilite o toggle de "iFood Hits" na aba de canais de venda.',
       '• O sistema aplica um Markup Inverso recalculado, adicionando a taxa de comissão sobre a diferença de preço.',
       '• Se você dá R$ 5,00 de desconto no prato de R$ 30,00, a comissão de 23% morde R$ 6,90. Isso significa que você recebe apenas R$ 18,10. Tirando o custo, seu lucro evapora.',
-      '**O Xande recomenda:** Nunca use cupons de desconto simples sem recalcular o Markup Inverso para o canal promocional. O Lucro Fácil blinda essa margem na hora!'
+      '**O Xande recomenda:** Nunca use cupons de desconto simples sem recalcular o Markup Inverso para o canal promocional. O Cardápio Blindado blinda essa margem na hora!'
     ]
   }
 ];
@@ -69,7 +69,7 @@ export default function XandeChatDemo() {
     {
       id: 1,
       sender: 'xande',
-      text: 'Olá! Sou o **Xande**, seu copiloto de inteligência financeira e precificação de rampa da Lucro Fácil. Clique em uma das perguntas frequentes abaixo ou simule uma dúvida de restaurante para ver como eu blindo suas margens.'
+      text: 'Olá! Sou o **Xande**, seu copiloto de inteligência financeira e precificação de rampa da Cardápio Blindado. Clique em uma das perguntas frequentes abaixo ou simule uma dúvida de restaurante para ver como eu blindo suas margens.'
     }
   ]);
   const [isTyping, setIsTyping] = useState<boolean>(false);
@@ -120,7 +120,7 @@ export default function XandeChatDemo() {
         {
           id: Date.now() + 1,
           sender: 'xande',
-          text: `**Xande IA:** Entendo perfeitamente o seu ponto! Na operação de rampa de restaurantes, questões sobre "${userInputText}" sempre voltam para o controle milimétrico do **Markup Inverso** e o monitoramento rigoroso do **CMV por Ficha Técnica**.\n\nPara blindar seu lucro nesse cenário, o melhor caminho é cadastrar a receita no Lucro Fácil, definir sua **Régua da Casa** (mínimo de 20% de margem líquida limpa) e aplicar o recálculo automático de canais de entrega. Se preferir, posso te guiar em um dos tópicos rápidos do menu de simulações!`
+          text: `**Xande IA:** Entendo perfeitamente o seu ponto! Na operação de rampa de restaurantes, questões sobre "${userInputText}" sempre voltam para o controle milimétrico do **Markup Inverso** e o monitoramento rigoroso do **CMV por Ficha Técnica**.\n\nPara blindar seu lucro nesse cenário, o melhor caminho é cadastrar a receita no Cardápio Blindado, definir sua **Régua da Casa** (mínimo de 20% de margem líquida limpa) e aplicar o recálculo automático de canais de entrega. Se preferir, posso te guiar em um dos tópicos rápidos do menu de simulações!`
         }
       ]);
     }, 1500);

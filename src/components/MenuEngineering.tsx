@@ -203,7 +203,7 @@ export default function MenuEngineering() {
 
             <div className="pt-2 border-t border-slate-900 text-[11px] md:text-[10px] text-slate-500 flex items-center gap-1 leading-snug">
               <Info className="w-3 h-3 text-emerald-400 shrink-0" />
-              <span>O Lucro Fácil recalcula esse mix de saídas todas as noites, cruzando as notas fiscais do seu PDV.</span>
+              <span>O Cardápio Blindado recalcula esse mix de saídas todas as noites, cruzando as notas fiscais do seu PDV.</span>
             </div>
           </div>
 

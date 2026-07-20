@@ -146,7 +146,7 @@ export default function BuffetSimulator() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
         <div className="md:col-span-8 bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-5 text-sm md:text-xs text-slate-300 leading-relaxed flex flex-col justify-center">
           <p className="mb-3">
-            O <strong className="text-emerald-400">Lucro Fácil</strong> resolveu esse problema usando o método científico da <strong className="text-white">Média de Equilíbrio</strong>. Você não precisa cadastrar prato por prato. Nós dividimos a sua rampa em três grupos simples: <strong className="text-white">Pratos Leves</strong> (saladas e molhos), <strong className="text-white">Pratos Médios</strong> (arroz, feijão e massas) e <strong className="text-white">Pratos Pesados</strong> (carnes, peixes e queijos).
+            O <strong className="text-emerald-400">Cardápio Blindado</strong> resolveu esse problema usando o método científico da <strong className="text-white">Média de Equilíbrio</strong>. Você não precisa cadastrar prato por prato. Nós dividimos a sua rampa em três grupos simples: <strong className="text-white">Pratos Leves</strong> (saladas e molhos), <strong className="text-white">Pratos Médios</strong> (arroz, feijão e massas) e <strong className="text-white">Pratos Pesados</strong> (carnes, peixes e queijos).
           </p>
           <p>
             O sistema calcula o custo ponderado com base no consumo médio do seu cliente padrão e embuti até as perdas por evaporação térmica (a água que a comida perde ficando embaixo das lâmpadas quentes) e o desperdício das cubas no fechamento do turno. É a primeira vez no mercado que os donos de self-service e sorveterias têm uma ferramenta que entende a realidade deles.
@@ -317,7 +317,7 @@ export default function BuffetSimulator() {
           <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-3.5 text-xs">
             <span className="text-emerald-400 font-bold block mb-1">💡 Visão de Consultoria de Rampa:</span>
             <p className="text-slate-400 text-xs md:text-[11px] leading-relaxed">
-              Diferente do cardápio a la carte, o self-service é um jogo de médias. Se a sua rampa tiver <strong className="text-emerald-400">excesso de pratos pesados</strong> (ex: churrasco direto e proteínas caras sem controle), seu custo real por quilo salta do custo ponderado de R$ {results.weightedCostKg.toFixed(2)} para valores perigosos como R$ {results.operationalCostKg.toFixed(2)}, corroendo seu lucro mesmo cobrando R$ {results.suggestedKgPrice.toFixed(2)}/kg ou R$ {results.suggestedBuffetLivre.toFixed(2)} no buffet livre. Use o Lucro Fácil para achar a proporção ideal de rampa e garantir a saúde do seu caixa!
+              Diferente do cardápio a la carte, o self-service é um jogo de médias. Se a sua rampa tiver <strong className="text-emerald-400">excesso de pratos pesados</strong> (ex: churrasco direto e proteínas caras sem controle), seu custo real por quilo salta do custo ponderado de R$ {results.weightedCostKg.toFixed(2)} para valores perigosos como R$ {results.operationalCostKg.toFixed(2)}, corroendo seu lucro mesmo cobrando R$ {results.suggestedKgPrice.toFixed(2)}/kg ou R$ {results.suggestedBuffetLivre.toFixed(2)} no buffet livre. Use o Cardápio Blindado para achar a proporção ideal de rampa e garantir a saúde do seu caixa!
             </p>
           </div>
 

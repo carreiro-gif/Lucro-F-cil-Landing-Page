@@ -8,12 +8,13 @@ interface Channel {
   commission: number;
   fixedFee: number;
   anticipationFee: number;
+  customLabel?: string;
 }
 
 const CHANNELS: Channel[] = [
-  { id: 'salao', name: 'Loja Física / Salão', commission: 0.0, fixedFee: 0.0, anticipationFee: 0.0 },
-  { id: 'ifood-entrega', name: 'iFood (Plano Entrega)', commission: 0.23, fixedFee: 3.50, anticipationFee: 0.02 },
-  { id: 'ifood-basico', name: 'iFood (Plano Básico)', commission: 0.155, fixedFee: 0.0, anticipationFee: 0.02 },
+  { id: 'salao', name: 'Loja Física / Salão', commission: 0.0, fixedFee: 0.0, anticipationFee: 0.0, customLabel: 'Loja Física / Salão (Sem Taxas)' },
+  { id: 'ifood-entrega', name: 'iFood (Plano Entrega)', commission: 0.265, fixedFee: 0.0, anticipationFee: 0.02, customLabel: 'iFood (Plano Entrega) (23% comissão + 3,5% taxa de pagamento = 26,5%)' },
+  { id: 'ifood-basico', name: 'iFood (Plano Básico)', commission: 0.152, fixedFee: 0.0, anticipationFee: 0.02, customLabel: 'iFood (Plano Básico) (12% comissão + 3,2% taxa de pagamento = 15,2%)' },
   { id: 'keeta', name: 'Keeta Delivery', commission: 0.15, fixedFee: 0.0, anticipationFee: 0.015 },
   { id: '99food', name: '99Food Delivery', commission: 0.18, fixedFee: 0.0, anticipationFee: 0.019 },
 ];
@@ -165,7 +166,7 @@ export default function InteractiveCalculator() {
               >
                 {CHANNELS.map(ch => (
                   <option key={ch.id} value={ch.id}>
-                    {ch.name} ({formatPercent(ch.commission)} + {formatCurrencyPt(ch.fixedFee)})
+                    {ch.customLabel || `${ch.name} (${formatPercent(ch.commission)} + ${formatCurrencyPt(ch.fixedFee)})`}
                   </option>
                 ))}
               </select>
@@ -283,7 +284,7 @@ export default function InteractiveCalculator() {
                     </div>
                   </div>
 
-                  {/* Card Lucro Fácil */}
+                  {/* Card Cardápio Blindado */}
                   <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-xl p-4 flex flex-col justify-between relative overflow-hidden">
                     <div className="absolute top-2 right-2 bg-emerald-500/15 text-emerald-400 px-1.5 py-0.5 rounded text-[11px] md:text-[10px] font-mono flex items-center gap-1">
                       <ShieldCheck className="w-3 h-3" /> Blindagem de Lucro
@@ -335,7 +336,7 @@ export default function InteractiveCalculator() {
                         : `Atenção: Margem corroída em R$ ${(results.markupProfit - results.naiveProfit).toFixed(2)}`}
                     </h4>
                     <p className="text-xs md:text-[11px] text-slate-400 leading-relaxed">
-                      No chutômetro comum de R$ {results.naivePrice.toFixed(2)}, você paga comissões e impostos sobre o valor total do prato do seu próprio bolso, além de não cobrir os 33% de custos fixos (CFI) como aluguel e equipe, resultando em um <strong>prejuízo real de R$ {Math.abs(results.naiveProfit).toFixed(2)}</strong>. Com o <strong className="text-emerald-400">Markup Inverso do Lucro Fácil</strong>, o preço é calculado de forma reversa para que o cliente absorva as taxas e você tire exatamente <strong className="text-emerald-400">R$ {results.markupProfit.toFixed(2)} limpo</strong> (seus {targetMargin}% de lucro garantidos), com os custos fixos (R$ {results.cfiMoney.toFixed(2)}) e insumos 100% pagos.
+                      No chutômetro comum de R$ {results.naivePrice.toFixed(2)}, você paga comissões e impostos sobre o valor total do prato do seu próprio bolso, além de não cobrir os 33% de custos fixos (CFI) como aluguel e equipe, resultando em um <strong>prejuízo real de R$ {Math.abs(results.naiveProfit).toFixed(2)}</strong>. Com o <strong className="text-emerald-400">Markup Inverso do Cardápio Blindado</strong>, o preço é calculado de forma reversa para que o cliente absorva as taxas e você tire exatamente <strong className="text-emerald-400">R$ {results.markupProfit.toFixed(2)} limpo</strong> (seus {targetMargin}% de lucro garantidos), com os custos fixos (R$ {results.cfiMoney.toFixed(2)}) e insumos 100% pagos.
                     </p>
                   </div>
                 </div>
