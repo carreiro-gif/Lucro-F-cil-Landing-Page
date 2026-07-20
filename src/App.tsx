@@ -235,6 +235,17 @@ export default function App() {
             </a>
           </div>
 
+          {/* Imagem do Sistema com efeito Neon de fundo */}
+          <div className="relative max-w-4xl mx-auto mb-16 group">
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200" />
+            <img 
+              src="/imagens/hero-sistema.jpg" 
+              alt="Sistema Lucro Fácil Food Service" 
+              className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/90 w-full object-cover max-h-[480px] filter brightness-95 contrast-105 group-hover:scale-[1.005] transition-all duration-300"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+
           {/* Frases de Confiança pequenas */}
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-[11px] text-slate-400 font-mono font-medium pb-16 border-b border-zinc-900 max-w-4xl mx-auto">
             <span className="flex items-center gap-1.5">
@@ -470,7 +481,7 @@ export default function App() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               
               {/* Coluna da Esquerda: Textos de Dor e Conteúdo */}
-              <div className="lg:col-span-7 space-y-6">
+              <div className="lg:col-span-12 space-y-6">
                 <div className="space-y-3">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-500/10 text-red-400 text-xs font-bold rounded-lg border border-red-500/20 font-mono uppercase tracking-wider">
                     <AlertTriangle className="w-4 h-4 text-red-400" /> Alerta Oficial
@@ -516,22 +527,6 @@ export default function App() {
                   <div>
                     <span className="text-xs font-bold text-white block">Fonte Oficial</span>
                     <span className="text-[10px] text-slate-500 block">Portal do Parceiro iFood</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Coluna da Direita: Imagem Ilustrativa de Delivery */}
-              <div className="lg:col-span-5 flex items-center justify-center">
-                <div className="relative group w-full">
-                  <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-                  <img 
-                    src="/imagens/hero-sistema.jpg" 
-                    alt="Entrega de comida no restaurante" 
-                    className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[300px] md:h-[380px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute bottom-3 left-3 bg-black/75 px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono border border-zinc-800">
-                    Ilustração: Rampa & Canais de Delivery
                   </div>
                 </div>
               </div>
@@ -697,7 +692,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/imagens/hero-sistema.jpg" 
+                  src="/imagens/tabela-precos.jpg" 
                   alt="Tabela de Copiar e Colar" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
@@ -772,7 +767,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-cyan-500/10 to-emerald-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/imagens/hero-sistema.jpg" 
+                  src="/imagens/formula-caixa.jpg" 
                   alt="A Fórmula do Preço Perfeito" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
@@ -892,7 +887,7 @@ export default function App() {
               <div className="relative group w-full">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                 <img 
-                  src="/imagens/hero-sistema.jpg" 
+                  src="/imagens/fluxo-caixa.jpg" 
                   alt="Fluxo de Caixa Integrado" 
                   className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/80 w-full object-cover h-[280px] md:h-[360px] filter brightness-90 contrast-105 group-hover:scale-[1.01] transition-all duration-300"
                   referrerPolicy="no-referrer"
