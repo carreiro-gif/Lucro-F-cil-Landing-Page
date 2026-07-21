@@ -209,66 +209,210 @@ export default function App() {
 
       {/* HERO SECTION */}
       <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden bg-zinc-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          
-          {/* Badge Alerta Piscando */}
-          <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-cyan-950/40 text-cyan-400 text-sm md:text-xs font-bold rounded-lg border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.15)] mb-8 font-mono tracking-wider">
-            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping" />
-            <span>Módulo de Buffet Inteligente 🍲 e Xande IA já estão no ar!</span>
-          </div>
+        {/* Ambient glow backgrounds */}
+        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-          {/* Headline Principal */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight mb-6">
-            Pare de trabalhar duro só para pagar as taxas dos aplicativos de entrega.
-          </h1>
-
-          {/* Subheadline persuasiva */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            60% dos negócios de comida fecham as portas antes de completar 5 anos porque precificam no puro "chutômetro". Seja pizzaria, hamburgueria, açaiteria, sorveteria, buffet ou restaurante — o <strong className="text-emerald-400 font-semibold">Cardápio Blindado</strong> é o seu consultor financeiro de bolso. Ele calcula o preço certo contra as taxas abusivas, acha os custos escondidos e protege o dinheiro do seu caixa em tempo real.
-          </p>
-
-          {/* CTAs Principais */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-14 max-w-md mx-auto sm:max-w-none">
-            <a 
-              href="https://lucro-facil.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 flex items-center justify-center gap-2 group cursor-pointer"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* Left side text column */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="lg:col-span-7 text-left flex flex-col items-start"
             >
-              🚀 Começar Meu Teste de 14 Dias Grátis
-            </a>
-            <a 
-              href="#playground"
-              className="w-full sm:w-auto px-8 py-4 bg-zinc-950 border border-white hover:bg-white/5 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer"
+              {/* Badge */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-950/30 text-cyan-400 text-xs font-bold rounded-lg border border-cyan-500/35 shadow-[0_0_15px_rgba(6,182,212,0.1)] mb-6 font-mono tracking-wider">
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping" />
+                <span>Módulo de Buffet Inteligente 🍲 e Xande IA ativos!</span>
+              </div>
+
+              {/* Title */}
+              <h1 className="text-3.5xl sm:text-4.5xl md:text-5.5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-tight mb-5">
+                Descubra onde seu restaurante <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">perde dinheiro</span> e aumente seu lucro todos os meses.
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
+                O Cardápio Blindado reúne CMV, precificação, estoque, metas, indicadores financeiros e Inteligência Artificial em uma única plataforma feita para donos de restaurantes.
+              </p>
+
+              {/* Trust markers */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-400 mb-8 font-mono">
+                <div className="flex items-center gap-1.5">
+                  <Check className="w-4 h-4 text-emerald-400 font-bold shrink-0" />
+                  <span>Teste grátis por 14 dias</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Check className="w-4 h-4 text-emerald-400 font-bold shrink-0" />
+                  <span>Sem cartão de crédito</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Check className="w-4 h-4 text-emerald-400 font-bold shrink-0" />
+                  <span>Configuração em poucos minutos</span>
+                </div>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-6">
+                <a 
+                  href="https://lucro-facil.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/35 flex items-center justify-center gap-2 group cursor-pointer font-sans"
+                >
+                  COMEÇAR TESTE GRATUITO
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a 
+                  href="#playground"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('playground')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-8 py-4 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800/60 text-white rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer font-sans"
+                >
+                  VER DEMONSTRAÇÃO
+                </a>
+              </div>
+
+              {/* Social proof bar */}
+              <div className="flex items-center gap-3 text-slate-400 text-xs font-medium border-t border-zinc-900 pt-5 w-full">
+                <div className="flex -space-x-2 shrink-0">
+                  <span className="w-6 h-6 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[9px] font-bold text-emerald-400">RC</span>
+                  <span className="w-6 h-6 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[9px] font-bold text-cyan-400">MS</span>
+                  <span className="w-6 h-6 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[9px] font-bold text-orange-400">AO</span>
+                </div>
+                <span>Desenvolvido por quem vive a realidade dos restaurantes.</span>
+              </div>
+            </motion.div>
+
+            {/* Right side dashboard / image column */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="lg:col-span-5 relative mt-6 lg:mt-0 flex flex-col justify-center"
             >
-              Testar Simuladores Ativos
-            </a>
-          </div>
+              <div className="relative max-w-md mx-auto lg:max-w-none group w-full">
+                {/* Visual grid blur backdrop */}
+                <div className="absolute -inset-2.5 bg-gradient-to-r from-emerald-500/15 to-cyan-500/15 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
+                
+                <img 
+                  src="/imagens/hero-sistema.jpg" 
+                  alt="Sistema Cardápio Blindado Food Service" 
+                  className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/90 w-full object-cover max-h-[420px] filter brightness-95 contrast-105 group-hover:scale-[1.005] transition-all duration-300 z-10"
+                  referrerPolicy="no-referrer"
+                />
 
-          {/* Imagem do Sistema com efeito Neon de fundo */}
-          <div className="relative max-w-4xl mx-auto mb-16 group">
-            <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition duration-1000 group-hover:duration-200" />
-            <img 
-              src="/imagens/hero-sistema.jpg" 
-              alt="Sistema Cardápio Blindado Food Service" 
-              className="relative rounded-2xl border border-zinc-800 shadow-2xl shadow-black/90 w-full object-cover max-h-[480px] filter brightness-95 contrast-105 group-hover:scale-[1.005] transition-all duration-300"
-              referrerPolicy="no-referrer"
-            />
-          </div>
+                {/* Floating Badges */}
+                {/* Badge 1: Lucro +27% */}
+                <motion.div 
+                  className="hidden sm:flex absolute top-[10%] -left-[5%] bg-zinc-950/90 backdrop-blur-md border border-emerald-500/30 rounded-xl px-3 py-2 items-center gap-2 shadow-2xl shadow-emerald-500/5 z-20"
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                >
+                  <div className="p-1 bg-emerald-500/10 rounded-lg text-emerald-400">
+                    <TrendingUp className="w-4 h-4" />
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[10px] font-mono text-slate-500 block leading-none font-bold">CRESCIMENTO</span>
+                    <span className="text-xs font-extrabold text-white">Lucro +27%</span>
+                  </div>
+                </motion.div>
 
-          {/* Frases de Confiança pequenas */}
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs md:text-[11px] text-slate-400 font-mono font-medium pb-16 border-b border-zinc-900 max-w-4xl mx-auto">
-            <span className="flex items-center gap-1.5">
-              <span className="text-red-400 font-bold">❌</span> Não pede cartão de crédito no cadastro.
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-emerald-400 font-bold">⏱️</span> Fica pronto e configurado em apenas 3 minutos.
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-cyan-400 font-bold">📱</span> Funciona perfeitamente com iFood, 99Food e Keeta.
-            </span>
-          </div>
+                {/* Badge 2: CMV 29,8% */}
+                <motion.div 
+                  className="hidden sm:flex absolute bottom-[15%] -left-[8%] bg-zinc-950/90 backdrop-blur-md border border-zinc-800 rounded-xl px-3 py-2 items-center gap-2 shadow-2xl z-20"
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                >
+                  <div className="p-1 bg-cyan-500/10 rounded-lg text-cyan-400">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[10px] font-mono text-slate-500 block leading-none font-bold">META SAUDÁVEL</span>
+                    <span className="text-xs font-extrabold text-white">CMV 29,8%</span>
+                  </div>
+                </motion.div>
 
+                {/* Badge 3: Ticket Médio +R$ 5,40 */}
+                <motion.div 
+                  className="hidden sm:flex absolute top-[45%] -right-[10%] bg-zinc-950/90 backdrop-blur-md border border-zinc-800 rounded-xl px-3 py-2 items-center gap-2 shadow-2xl z-20"
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.1 }}
+                >
+                  <div className="p-1 bg-emerald-500/10 rounded-lg text-emerald-400">
+                    <Coins className="w-4 h-4" />
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[10px] font-mono text-slate-500 block leading-none font-bold">UPSELL ATIVO</span>
+                    <span className="text-xs font-extrabold text-white">Ticket Médio +R$ 5,40</span>
+                  </div>
+                </motion.div>
+
+                {/* Badge 4: Xande IA Online */}
+                <motion.div 
+                  className="hidden sm:flex absolute -top-[8%] right-[10%] bg-zinc-950/90 backdrop-blur-md border border-emerald-500/20 rounded-xl px-3 py-2 items-center gap-2 shadow-2xl z-20"
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                >
+                  <div className="relative">
+                    <div className="p-1 bg-emerald-500/10 rounded-lg text-emerald-400">
+                      <Bot className="w-4 h-4" />
+                    </div>
+                    <span className="absolute top-0 right-0 w-2 h-2 bg-emerald-400 rounded-full border border-zinc-950 animate-pulse" />
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[10px] font-mono text-slate-500 block leading-none font-bold">CO-PILOTO</span>
+                    <span className="text-xs font-extrabold text-white">Xande IA Online</span>
+                  </div>
+                </motion.div>
+
+                {/* Badge 5: 14 dias grátis */}
+                <motion.div 
+                  className="hidden sm:flex absolute -bottom-[5%] right-[20%] bg-zinc-950/90 backdrop-blur-md border border-cyan-500/30 rounded-xl px-3 py-2 items-center gap-2 shadow-2xl z-20"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                >
+                  <div className="p-1 bg-cyan-500/10 rounded-lg text-cyan-400">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div className="text-left">
+                    <span className="text-[10px] font-mono text-slate-500 block leading-none font-bold">TESTE ATIVO</span>
+                    <span className="text-xs font-extrabold text-white">14 dias grátis</span>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Mobile representation of badges (only on small screens) */}
+              <div className="flex sm:hidden flex-wrap gap-2.5 justify-center mt-6">
+                <div className="bg-zinc-900 border border-emerald-500/20 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-[11px]">
+                  <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-white font-bold">Lucro +27%</span>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-[11px]">
+                  <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                  <span className="text-white font-bold">CMV 29,8%</span>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-[11px]">
+                  <Coins className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-white font-bold">Ticket Médio +R$ 5,40</span>
+                </div>
+                <div className="bg-zinc-900 border border-emerald-500/20 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-[11px]">
+                  <Bot className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-white font-bold">Xande IA Online</span>
+                </div>
+                <div className="bg-zinc-900 border border-cyan-500/20 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-[11px]">
+                  <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <span className="text-white font-bold">14 dias grátis</span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
